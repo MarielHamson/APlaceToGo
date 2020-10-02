@@ -4,7 +4,7 @@ import BathroomList from './BathroomList';
 import BathroomDetail from './BathroomDetail';
 import EditBathroomForm from './EditBathroomForm';
 import { withFirestore, isLoaded } from 'react-redux-firebase';
-import Button from 'react-bootstrap/Button';
+import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import Header from './Header';
 import Container from 'react-bootstrap/Container';
