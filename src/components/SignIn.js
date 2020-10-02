@@ -179,7 +179,7 @@ function SignIn() {
 								fullWidth
 								id="email"
 								label="Email Address"
-								name="email"
+								name="signinEmail"
 								autoComplete="email"
 								autoFocus
 							/>
@@ -188,7 +188,7 @@ function SignIn() {
 								margin="normal"
 								required
 								fullWidth
-								name="password"
+								name="signinPassword"
 								label="Password"
 								type="password"
 								id="password"

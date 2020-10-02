@@ -39,3 +39,7 @@ follow tutorial to seed DB: https://medium.com/@devesu/how-to-upload-data-to-fir
 9:00-10:20 -- trouble with firebase, created new project due to some errors with admin permissions, updating github, wiped my history from last friday.
 
 10:30-11:00: Firebase is broken. Trying to add database is not allowed. Slightly freaking out but working on Material UI
+
+11:00 - 1:05: Played with Material Design and nav bar templates for too long. Most were too complex for this project. Returning to work on functionality next
+
+1:13: Found out my CORS extension was ruining my life. Wow.

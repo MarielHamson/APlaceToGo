@@ -101,13 +101,6 @@ function Header(props) {
 							className="mr-sm-2"
 						/>
 
-						{/* search params  */}
-						<Form.Control
-							type="text"
-							name="scents"
-							placeholder="scents"
-							className="mr-sm-2"
-						/>
 						<Button variant="success" type="submit">
 							Search
 						</Button>
