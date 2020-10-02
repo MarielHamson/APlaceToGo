@@ -16,7 +16,7 @@ function EditBathroomForm(props) {
 			accessible: event.target.accessible.value,
 			unisex: event.target.unisex.value,
 			directions: event.target.directions.value,
-			comments: event.target.comments.value,
+			comment: event.target.comment.value,
 		};
 		return firestore.update(
 			{ collection: 'bathrooms', doc: bathroom.id },

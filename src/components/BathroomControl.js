@@ -21,14 +21,14 @@ class BathroomControl extends React.Component {
 		};
 	}
 
-	// componentDidMount() {
-	// 	const auth = this.props.firebase.auth();
-	// 	auth.onAuthStateChanged((user) => {
-	// 		if (user) {
-	// 			this.setState({ user });
-	// 		}
-	// 	});
-	// }
+	componentDidMount() {
+		const auth = this.props.firebase.auth();
+		auth.onAuthStateChanged((user) => {
+			if (user) {
+				this.setState({ user });
+			}
+		});
+	}
 
 	handleClick = () => {
 		if (this.state.selectedBathroom != null) {

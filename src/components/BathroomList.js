@@ -41,7 +41,7 @@ function BathroomList(props) {
 							unisex={bathroom.unisex}
 							directions={bathroom.directions}
 							comment={bathroom.comment}
-							upvote={bathroom.upvote}
+							upvote={bathroom.upvote} 
 							downvote={bathroom.downvote}
 							id={bathroom.id}
 							key={bathroom.id}

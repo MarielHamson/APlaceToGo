@@ -20,7 +20,9 @@ function Bathroom(props) {
 						<Card.Subtitle className="mb-2 text-muted">
 							{props.street}
 						</Card.Subtitle>
-						<Card.Text className="text-muted">{props.upvote}</Card.Text>
+						<Card.Text className="text-muted">
+							{props.upvote} upvotes{' '}
+						</Card.Text>
 					</Card.Body>
 				</Card>
 			</div>

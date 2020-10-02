@@ -22,7 +22,7 @@ function ReusableForm(props) {
 					<Form.Control
 						type="text"
 						name="street"
-						placeholder="Enter the street."
+						placeholder="Enter the street"
 						defaultValue={props.street}
 					/>
 				</Form.Group>
@@ -42,19 +42,23 @@ function ReusableForm(props) {
 						defaultValue={props.state}
 					/>
 				</Form.Group>
+
 				<Form.Group>
-					<Form.Control
-						type="radio"
+					<Form.Check
+						size="lg"
+						type="checkbox"
 						name="accessible"
-						placeholder="Accessible?"
+						label="Accessible?"
 						defaultValue={props.accessible}
 					/>
 				</Form.Group>
 				<Form.Group>
-					<Form.Control
-						type="radio"
+					<Form.Check
+						size="lg"
+						type="checkbox"
 						name="unisex"
-						placeholder="Gender Neutral?"
+						label="Gender Neutral?"
+						defaultValue={props.unisex}
 					/>
 				</Form.Group>
 				<Form.Group>
