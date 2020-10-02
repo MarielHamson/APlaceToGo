@@ -49,7 +49,7 @@ function ReusableForm(props) {
 						type="checkbox"
 						name="accessible"
 						label="Accessible?"
-						defaultValue={props.accessible}
+						defaultValue="false"
 					/>
 				</Form.Group>
 				<Form.Group>
@@ -58,7 +58,7 @@ function ReusableForm(props) {
 						type="checkbox"
 						name="unisex"
 						label="Gender Neutral?"
-						defaultValue={props.unisex}
+						defaultValue="false"
 					/>
 				</Form.Group>
 				<Form.Group>

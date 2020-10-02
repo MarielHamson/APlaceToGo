@@ -15,7 +15,6 @@ function NewBathroomForm(props) {
 			street: event.target.street.value,
 			city: event.target.city.value,
 			state: event.target.state.value,
-			// place: event.target.place.value,
 			accessible: event.target.accessible.checked,
 			unisex: event.target.unisex.checked,
 			directions: event.target.directions.value,
@@ -31,6 +30,7 @@ function NewBathroomForm(props) {
 				formSubmissionHandler={addBathroomToFirestore}
 				buttonText="Add Bathroom"
 			/>
+			{console.log(props.accessible)}
 		</React.Fragment>
 	);
 }

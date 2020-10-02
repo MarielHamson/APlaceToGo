@@ -12,11 +12,15 @@ function BathroomDetail(props) {
 				{bathroom.name} - {bathroom.street}, {bathroom.state}
 			</h2>
 			<p>Accessible: {bathroom.accessible}</p>
+			{console.log(bathroom.accessible)}
 			<p>Gender Neutral: {bathroom.unisex}</p>
+			{console.log(bathroom.unisex)}
 			<p>Directions: {bathroom.directions} </p>
 			<p>Comments: {bathroom.comment}</p>
 			<p>Upvotes: {bathroom.upvote}</p>
+			{console.log(bathroom.upvote)}
 			<p>Downvotes: {bathroom.downvote}</p>
+			{console.log(bathroom.downvote)}
 
 			<Button className="mr-2" variant="info" onClick={props.onClickingEdit}>
 				Edit Bathroom Details
