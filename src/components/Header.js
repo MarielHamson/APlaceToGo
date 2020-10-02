@@ -3,7 +3,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
 import Button from '@material-ui/core/Button';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import { useFirestore } from 'react-redux-firebase';
 import { withFirestore } from 'react-redux-firebase';
@@ -89,9 +88,6 @@ function Header(props) {
 						<Nav.Link as={Link} to="/signin">
 							Sign-in
 						</Nav.Link>
-						<NavDropdown title="Dropdown" id="basic-nav-dropdown">
-							<NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-						</NavDropdown>
 					</Nav>
 					<Form inline onSubmit={handleSearchQuery}>
 						<Form.Control

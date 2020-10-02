@@ -45,3 +45,7 @@ follow tutorial to seed DB: https://medium.com/@devesu/how-to-upload-data-to-fir
 1:13: Found out my CORS extension was ruining my life. Wow.
 
 1:00 - 3:00 worked on checkbox values not showing and import. Neither work still.
+
+3:00 - 4:40: break
+
+4:40 -
