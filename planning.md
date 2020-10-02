@@ -43,3 +43,5 @@ follow tutorial to seed DB: https://medium.com/@devesu/how-to-upload-data-to-fir
 11:00 - 1:05: Played with Material Design and nav bar templates for too long. Most were too complex for this project. Returning to work on functionality next
 
 1:13: Found out my CORS extension was ruining my life. Wow.
+
+1:00 - 3:00 worked on checkbox values not showing and import. Neither work still.

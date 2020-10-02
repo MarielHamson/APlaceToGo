@@ -20,3 +20,6 @@
 .env
 .aplacetogo-firebase-adminsdk-is118-f3913f8a4b.json
 npm-debug.log*
+serviceAccount.json
+config.js
+/files
