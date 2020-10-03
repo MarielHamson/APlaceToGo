@@ -10,11 +10,7 @@ import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles({
 	root: {
 		minWidth: 275,
-	},
-	bullet: {
-		display: 'inline-block',
-		margin: '0 2px',
-		transform: 'scale(0.8)',
+		// maxWidth: 400,
 	},
 	title: {
 		fontSize: 14,
@@ -37,13 +33,13 @@ function Bathroom(props) {
 			{/* <div onClick={() => props.whenBathroomClicked(props.id)}> */}
 			<Card className={classes.root} variant="outlined">
 				<CardContent>
-					<Typography
+					{/* <Typography
 						className={classes.title}
 						color="textSecondary"
 						gutterBottom
 					>
 						Bathroom
-					</Typography>
+					</Typography> */}
 					<Typography variant="h5" component="h2">
 						{props.name}
 					</Typography>
@@ -52,7 +48,11 @@ function Bathroom(props) {
 					</Typography>
 				</CardContent>
 				<CardActions>
-					<Button size="lg" onClick={() => props.whenBathroomClicked(props.id)}>
+					<Button
+						variant="outlined"
+						size="lg"
+						onClick={() => props.whenBathroomClicked(props.id)}
+					>
 						{' '}
 						See Details{' '}
 					</Button>

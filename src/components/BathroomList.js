@@ -3,14 +3,23 @@ import Bathroom from './Bathroom';
 import { useSelector } from 'react-redux';
 import { useFirestoreConnect, isLoaded } from 'react-redux-firebase';
 import React, { useState } from 'react';
-import { render } from 'react-dom';
 import { useTrail, animated } from 'react-spring';
 import '../index.css';
+import { Grid } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from './Bathroom.js';
 
-const items = ['Welcome To Bathroom Finder'];
+const items = ['Find A Place To Go'];
 const config = { mass: 5, tension: 2000, friction: 200 };
+const useStyles = makeStyles({
+	gridContainer: {
+		paddingLeft: '40px',
+		paddingRight: '40px',
+	},
+});
 
 function BathroomList(props) {
+	const classes = useStyles();
 	const [toggle, set] = useState(true);
 	const trail = useTrail(items.length, {
 		config,
@@ -61,6 +70,13 @@ function BathroomList(props) {
 				{/* <hr /> */}
 				{bathrooms.map((bathroom) => {
 					return (
+						// <Grid
+						// 	container
+						// 	spacing={4}
+						// 	className={classes.gridContainer}
+						// 	justify="center"
+						// >
+						// 	<Grid item xs={12} sm={6} md={4}>
 						<Bathroom
 							whenBathroomClicked={props.onBathroomSelection}
 							name={bathroom.name}
@@ -76,6 +92,8 @@ function BathroomList(props) {
 							id={bathroom.id}
 							key={bathroom.id}
 						/>
+						// 	</Grid>
+						// </Grid>
 					);
 				})}
 			</React.Fragment>
