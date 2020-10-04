@@ -8,11 +8,10 @@ html {
 
 body {
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-		sans-serif;
+	font-family: 'Sacramento', cursive, monospace;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background: #1e0253 !important;
 }
 
 h1,
@@ -22,11 +21,18 @@ h4,
 h5,
 p {
 	color: lightcoral;
+	font-family: 'Sacramento', cursive, monospace;
 }
 
+.MuiPaper-root {
+	background: #1e0253;
+}
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-		monospace;
+	font-family: 'Sacramento', cursive, monospace;
+}
+
+.root {
+	background: '#1e0253';
 }
 
 .container {

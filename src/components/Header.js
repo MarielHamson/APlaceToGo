@@ -9,6 +9,22 @@ import { withFirestore } from 'react-redux-firebase';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 import firebase from 'firebase';
+import { withStyles } from '@material-ui/core';
+
+const StyledButton = withStyles({
+	root: {
+		background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+		borderRadius: 3,
+		border: 0,
+		color: '#1e0253',
+		height: 48,
+		padding: '0 30px',
+		boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+	},
+	label: {
+		textTransform: 'capitalize',
+	},
+})(Button);
 
 function Header(props) {
 	const history = useHistory();
@@ -74,19 +90,30 @@ function Header(props) {
 			<Navbar
 				style={{
 					backgroundColor: '#1e0253',
-					boxShadow: '0 5px 15px rgba(0, 0, 0, .5)',
-					textColor: '#c637a0',
+					color: '#c637a0',
 				}}
 				sticky="top"
 				expand="lg"
 			>
-				<Navbar.Brand as={Link} to="/">
+				<Navbar.Brand
+					style={{
+						color: 'lightcoral',
+					}}
+					as={Link}
+					to="/"
+				>
 					A Place to Go
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="mr-auto">
-						<Nav.Link as={Link} to="/signin">
+						<Nav.Link
+							style={{
+								color: 'lightcoral',
+							}}
+							as={Link}
+							to="/signin"
+						>
 							Sign-in
 						</Nav.Link>
 					</Nav>
@@ -98,15 +125,13 @@ function Header(props) {
 							className="mr-sm-2"
 						/>
 
-						<Button variant="success" type="submit">
-							Search
-						</Button>
+						<StyledButton type="submit">Search</StyledButton>
 					</Form>
 					<Form inline>
 						{/* insert code to change signout button to sign in and vice versa */}
-						<Button onClick={doSignOut} variant="success" className="ml-2">
+						<StyledButton onClick={doSignOut} className="ml-2">
 							Sign Out
-						</Button>
+						</StyledButton>
 					</Form>
 				</Navbar.Collapse>
 			</Navbar>

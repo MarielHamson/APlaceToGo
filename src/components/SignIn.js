@@ -15,6 +15,22 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
+import { withStyles } from '@material-ui/core';
+
+const StyledButton = withStyles({
+	root: {
+		background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+		borderRadius: 3,
+		border: 0,
+		color: '#1e0253',
+		height: 48,
+		padding: '0 30px',
+		boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+	},
+	label: {
+		textTransform: 'capitalize',
+	},
+})(Button);
 
 function Copyright() {
 	return (
@@ -32,6 +48,7 @@ function Copyright() {
 const useStyles = makeStyles((theme) => ({
 	root: {
 		height: '100vh',
+		background: '#1e0253',
 	},
 	image: {
 		backgroundImage: 'url(https://source.unsplash.com/featured/?{bathroom})',
@@ -56,6 +73,7 @@ const useStyles = makeStyles((theme) => ({
 	form: {
 		width: '100%',
 		marginTop: theme.spacing(1),
+		color: 'lightcoral',
 	},
 	submit: {
 		margin: theme.spacing(3, 0, 2),
@@ -148,7 +166,7 @@ function SignIn() {
 								id="password"
 								autoComplete="current-password"
 							/>
-							<Button
+							<StyledButton
 								type="submit"
 								fullWidth
 								variant="contained"
@@ -156,7 +174,7 @@ function SignIn() {
 								className={classes.submit}
 							>
 								Sign Up
-							</Button>
+							</StyledButton>
 							{/* <Button
 							type="submit"
 							fullWidth
@@ -198,7 +216,7 @@ function SignIn() {
 								control={<Checkbox value="remember" color="primary" />}
 								label="Remember me"
 							/>
-							<Button
+							<StyledButton
 								type="submit"
 								fullWidth
 								variant="contained"
@@ -206,7 +224,7 @@ function SignIn() {
 								className={classes.submit}
 							>
 								Sign In
-							</Button>
+							</StyledButton>
 						</form>
 						<Grid container>
 							<Grid item xs>

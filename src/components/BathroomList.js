@@ -8,15 +8,33 @@ import '../index.css';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from './Bathroom.js';
+import Paper from '@material-ui/core/Paper';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 const items = ['Find A Place To Go'];
 const config = { mass: 5, tension: 2000, friction: 200 };
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
+	root: {
+		height: '100vh',
+		background: '#1e0253',
+	},
+	image: {
+		backgroundImage: 'url(../background.png)',
+		backgroundRepeat: 'no-repeat',
+		backgroundSize: 'cover',
+		backgroundPosition: 'center',
+	},
+	paper: {
+		margin: theme.spacing(8, 4),
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center',
+	},
 	gridContainer: {
 		paddingLeft: '40px',
 		paddingRight: '40px',
 	},
-});
+}));
 
 function BathroomList(props) {
 	const classes = useStyles();
@@ -53,34 +71,41 @@ function BathroomList(props) {
 						))}
 					</div>
 				</div>
-				{bathrooms.map((bathroom) => {
-					return (
-						<Grid
-							container
-							spacing={4}
-							className={classes.gridContainer}
-							justify="center"
-						>
-							<Grid item xs={12} sm={6} md={4}>
-								<Bathroom
-									whenBathroomClicked={props.onBathroomSelection}
-									name={bathroom.name}
-									street={bathroom.street}
-									city={bathroom.city}
-									state={bathroom.state}
-									accessible={bathroom.accessible}
-									unisex={bathroom.unisex}
-									directions={bathroom.directions}
-									comment={bathroom.comment}
-									upvote={bathroom.upvote}
-									downvote={bathroom.downvote}
-									id={bathroom.id}
-									key={bathroom.id}
-								/>
-							</Grid>
-						</Grid>
-					);
-				})}
+				<Grid container component="main" className={classes.root}>
+					<CssBaseline />
+					<Grid item xs={false} sm={4} md={7} className={classes.image} />
+					<Grid
+						item
+						xs={12}
+						sm={8}
+						md={5}
+						component={Paper}
+						elevation={6}
+						square
+					>
+						<div className={classes.paper}>
+							{bathrooms.map((bathroom) => {
+								return (
+									<Bathroom
+										whenBathroomClicked={props.onBathroomSelection}
+										name={bathroom.name}
+										street={bathroom.street}
+										city={bathroom.city}
+										state={bathroom.state}
+										accessible={bathroom.accessible}
+										unisex={bathroom.unisex}
+										directions={bathroom.directions}
+										comment={bathroom.comment}
+										upvote={bathroom.upvote}
+										downvote={bathroom.downvote}
+										id={bathroom.id}
+										key={bathroom.id}
+									/>
+								);
+							})}
+						</div>
+					</Grid>
+				</Grid>
 			</React.Fragment>
 		);
 	} else {
