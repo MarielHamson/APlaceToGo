@@ -28,19 +28,6 @@ function BathroomList(props) {
 		height: toggle ? 80 : 0,
 		from: { opacity: 0, x: 20, height: 0 },
 	});
-	// const { onSearchQuery } = props;
-
-	// if (onSearchQuery == null){
-	// 	onSearchQuery.forEach(doc => {
-	// 		console.log(doc.data());
-	// });
-	// }
-
-	// if (onSearchQuery != null){
-	// 	let output = onSearchQuery.forEach(doc => {console.log(doc.data())});
-	// 	// (doc.id, '=>', doc.data());
-
-	// }
 
 	useFirestoreConnect([{ collection: 'bathrooms' }]);
 
@@ -66,34 +53,32 @@ function BathroomList(props) {
 						))}
 					</div>
 				</div>
-				{/* <h1 style={{ textAlign: 'center' }}>Bathroom Finder</h1> */}
-				{/* <hr /> */}
 				{bathrooms.map((bathroom) => {
 					return (
-						// <Grid
-						// 	container
-						// 	spacing={4}
-						// 	className={classes.gridContainer}
-						// 	justify="center"
-						// >
-						// 	<Grid item xs={12} sm={6} md={4}>
-						<Bathroom
-							whenBathroomClicked={props.onBathroomSelection}
-							name={bathroom.name}
-							street={bathroom.street}
-							city={bathroom.city}
-							state={bathroom.state}
-							accessible={bathroom.accessible}
-							unisex={bathroom.unisex}
-							directions={bathroom.directions}
-							comment={bathroom.comment}
-							upvote={bathroom.upvote}
-							downvote={bathroom.downvote}
-							id={bathroom.id}
-							key={bathroom.id}
-						/>
-						// 	</Grid>
-						// </Grid>
+						<Grid
+							container
+							spacing={4}
+							className={classes.gridContainer}
+							justify="center"
+						>
+							<Grid item xs={12} sm={6} md={4}>
+								<Bathroom
+									whenBathroomClicked={props.onBathroomSelection}
+									name={bathroom.name}
+									street={bathroom.street}
+									city={bathroom.city}
+									state={bathroom.state}
+									accessible={bathroom.accessible}
+									unisex={bathroom.unisex}
+									directions={bathroom.directions}
+									comment={bathroom.comment}
+									upvote={bathroom.upvote}
+									downvote={bathroom.downvote}
+									id={bathroom.id}
+									key={bathroom.id}
+								/>
+							</Grid>
+						</Grid>
 					);
 				})}
 			</React.Fragment>

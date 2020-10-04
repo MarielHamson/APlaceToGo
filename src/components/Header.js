@@ -73,8 +73,9 @@ function Header(props) {
 		<React.Fragment>
 			<Navbar
 				style={{
-					backgroundColor: 'rgba(255, 255, 255, .5)',
+					backgroundColor: '#1e0253',
 					boxShadow: '0 5px 15px rgba(0, 0, 0, .5)',
+					textColor: '#c637a0',
 				}}
 				sticky="top"
 				expand="lg"
@@ -92,7 +93,7 @@ function Header(props) {
 					<Form inline onSubmit={handleSearchQuery}>
 						<Form.Control
 							type="text"
-							name="city"
+							name="name"
 							placeholder="Search bathrooms"
 							className="mr-sm-2"
 						/>
@@ -102,6 +103,7 @@ function Header(props) {
 						</Button>
 					</Form>
 					<Form inline>
+						{/* insert code to change signout button to sign in and vice versa */}
 						<Button onClick={doSignOut} variant="success" className="ml-2">
 							Sign Out
 						</Button>

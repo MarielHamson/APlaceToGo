@@ -21,6 +21,8 @@ class BathroomControl extends React.Component {
 		};
 	}
 
+	resetComponent = () => this.setState({ isLoading: false, search: null });
+
 	componentDidMount() {
 		const auth = this.props.firebase.auth();
 		auth.onAuthStateChanged((user) => {

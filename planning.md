@@ -34,7 +34,9 @@ https://firebase.google.com/docs/firestore/manage-data/transactions
 
 review API calls and download JSON
 
-follow tutorial to seed DB: https://medium.com/@devesu/how-to-upload-data-to-firebase-firestore-cloud-database-63543d7b34c5
+## follow tutorial to seed DB: https://medium.com/@devesu/how-to-upload-data-to-firebase-firestore-cloud-database-63543d7b34c5
+
+10/2
 
 9:00-10:20 -- trouble with firebase, created new project due to some errors with admin permissions, updating github, wiped my history from last friday.
 
@@ -48,4 +50,10 @@ follow tutorial to seed DB: https://medium.com/@devesu/how-to-upload-data-to-fir
 
 3:00 - 4:40: break
 
-4:40 -
+4:40 - 6:18: grid layout
+
+---
+
+10/3
+
+11:00 - 12:00 worked on sign out button, read stack overflow
