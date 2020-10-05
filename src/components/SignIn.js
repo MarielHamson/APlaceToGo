@@ -114,19 +114,6 @@ function SignIn() {
 			});
 	}
 
-	// function doSignOut() {
-	// 	firebase
-	// 		.auth()
-	// 		.signOut()
-	// 		.then(function () {
-	// 			console.log('Successfully signed out!');
-	// 			history.push('/');
-	// 		})
-	// 		.catch(function (error) {
-	// 			console.log(error.message);
-	// 		});
-	// }
-
 	let history = useHistory();
 
 	return (

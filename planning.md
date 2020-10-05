@@ -62,4 +62,6 @@ review API calls and download JSON
 
 1:00-1:30 tried to fix sign out bug
 
-3:45- : styling buttons and main page
+3:45- : 5:00 styling buttons and main page
+
+7:15 - 10:45 tried something new with bathroom ID to create a different route in order to get the brand logo to redirect correctly. Didn't work so reverted.

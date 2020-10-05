@@ -9,18 +9,24 @@ import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import Container from 'react-bootstrap/Container';
+import potty from '../assets/images/potty.jpeg';
 
 const items = ['Find A Place To Go'];
 const config = { mass: 5, tension: 2000, friction: 200 };
 const useStyles = makeStyles((theme) => ({
 	root: {
 		height: '100vh',
-		width: '100vh',
 		background: 'lightcoral',
 	},
+
 	image: {
-		backgroundImage: 'url(../background.png)',
+		backgroundImage: 'url(../assets/images/potty.png)',
 		backgroundRepeat: 'no-repeat',
+		backgroundColor:
+			theme.palette.type === 'light'
+				? theme.palette.grey[50]
+				: theme.palette.grey[900],
 		backgroundSize: 'cover',
 		backgroundPosition: 'center',
 	},
@@ -28,8 +34,7 @@ const useStyles = makeStyles((theme) => ({
 		margin: theme.spacing(8, 4),
 		display: 'flex',
 		flexDirection: 'column',
-		alignItems: 'right',
-		background: 'lightcoral',
+		alignItems: 'center',
 	},
 	gridContainer: {
 		paddingLeft: '40px',
@@ -56,57 +61,59 @@ function BathroomList(props) {
 	if (isLoaded(bathrooms)) {
 		return (
 			<React.Fragment>
-				<div className="trails-main" onClick={() => set((state) => !state)}>
-					<div>
-						{trail.map(({ x, height, ...rest }, index) => (
-							<animated.div
-								key={items[index]}
-								className="trails-text"
-								style={{
-									...rest,
-									transform: x.interpolate((x) => `translate3d(0,${x}px,0)`),
-								}}
-							>
-								<animated.div style={{ height }}>{items[index]}</animated.div>
-							</animated.div>
-						))}
-					</div>
-				</div>
-				<Grid container component="main" className={classes.root}>
-					<CssBaseline />
-					<Grid item xs={false} sm={4} md={7} className={classes.image} />
-					<Grid
-						item
-						xs={12}
-						sm={8}
-						md={5}
-						// component={Paper}
-						elevation={6}
-						square
-					>
-						<div className={classes.paper}>
-							{bathrooms.map((bathroom) => {
-								return (
-									<Bathroom
-										whenBathroomClicked={props.onBathroomSelection}
-										name={bathroom.name}
-										street={bathroom.street}
-										city={bathroom.city}
-										state={bathroom.state}
-										accessible={bathroom.accessible}
-										unisex={bathroom.unisex}
-										directions={bathroom.directions}
-										comment={bathroom.comment}
-										upvote={bathroom.upvote}
-										downvote={bathroom.downvote}
-										id={bathroom.id}
-										key={bathroom.id}
-									/>
-								);
-							})}
+				<Container class="container">
+					<div className="trails-main" onClick={() => set((state) => !state)}>
+						<div>
+							{trail.map(({ x, height, ...rest }, index) => (
+								<animated.div
+									key={items[index]}
+									className="trails-text"
+									style={{
+										...rest,
+										transform: x.interpolate((x) => `translate3d(0,${x}px,0)`),
+									}}
+								>
+									<animated.div style={{ height }}>{items[index]}</animated.div>
+								</animated.div>
+							))}
 						</div>
+					</div>
+					<Grid container component="main" className={classes.root}>
+						<CssBaseline />
+						<Grid item xs={false} sm={4} md={7} className={classes.image} />
+						<Grid
+							item
+							xs={12}
+							sm={8}
+							md={5}
+							component={Paper}
+							elevation={6}
+							square
+						>
+							<div className={classes.paper}>
+								{bathrooms.map((bathroom) => {
+									return (
+										<Bathroom
+											whenBathroomClicked={props.onBathroomSelection}
+											name={bathroom.name}
+											street={bathroom.street}
+											city={bathroom.city}
+											state={bathroom.state}
+											accessible={bathroom.accessible}
+											unisex={bathroom.unisex}
+											directions={bathroom.directions}
+											comment={bathroom.comment}
+											upvote={bathroom.upvote}
+											downvote={bathroom.downvote}
+											id={bathroom.id}
+											key={bathroom.id}
+										/>
+									);
+								})}
+							</div>
+						</Grid>
 					</Grid>
-				</Grid>
+				</Container>
 			</React.Fragment>
 		);
 	} else {

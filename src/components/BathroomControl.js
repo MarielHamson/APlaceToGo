@@ -10,6 +10,9 @@ import Container from 'react-bootstrap/Container';
 import SearchList from './SearchList';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
+import Card from '@material-ui/core/Card';
+import Original from '../assets/images/Original.png';
 
 const StyledButton = withStyles({
 	root: {
@@ -36,8 +39,6 @@ class BathroomControl extends React.Component {
 			search: null,
 		};
 	}
-
-	// resetComponent = () => this.setState({ isLoading: false, search: null });
 
 	componentDidMount() {
 		const auth = this.props.firebase.auth();
@@ -130,7 +131,11 @@ class BathroomControl extends React.Component {
 				<React.Fragment>
 					<Header className="header" />
 					<Container className="container">
-						<h1> You must be signed in to access the bathroom search.</h1>
+						<Card className="card">
+							<p id="accessHeadline">Welcome to a Place To Go </p>
+							<p id="accessTagline">Please sign in to view the bathroom list</p>
+						</Card>
+						{/* <img id="logo" src={Original} /> */}
 					</Container>
 				</React.Fragment>
 			);
@@ -183,7 +188,6 @@ class BathroomControl extends React.Component {
 					<StyledButton variant="primary" onClick={this.handleClick}>
 						{buttonText}
 					</StyledButton>
-					{/* </Container> */}
 				</React.Fragment>
 			);
 		}
