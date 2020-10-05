@@ -7,7 +7,6 @@ import { useTrail, animated } from 'react-spring';
 import '../index.css';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Card from './Bathroom.js';
 import Paper from '@material-ui/core/Paper';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
@@ -16,7 +15,8 @@ const config = { mass: 5, tension: 2000, friction: 200 };
 const useStyles = makeStyles((theme) => ({
 	root: {
 		height: '100vh',
-		background: '#1e0253',
+		width: '100vh',
+		background: 'lightcoral',
 	},
 	image: {
 		backgroundImage: 'url(../background.png)',
@@ -28,7 +28,8 @@ const useStyles = makeStyles((theme) => ({
 		margin: theme.spacing(8, 4),
 		display: 'flex',
 		flexDirection: 'column',
-		alignItems: 'center',
+		alignItems: 'right',
+		background: 'lightcoral',
 	},
 	gridContainer: {
 		paddingLeft: '40px',
@@ -79,7 +80,7 @@ function BathroomList(props) {
 						xs={12}
 						sm={8}
 						md={5}
-						component={Paper}
+						// component={Paper}
 						elevation={6}
 						square
 					>
@@ -121,7 +122,5 @@ BathroomList.propTypes = {
 	onBathroomSelection: PropTypes.func,
 	onSearchQuery: PropTypes.object,
 };
-
-// render(<BathroomList />, document.getElementById('root'));
 
 export default BathroomList;

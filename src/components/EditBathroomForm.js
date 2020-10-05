@@ -2,6 +2,7 @@ import React from 'react';
 import ReusableForm from './ReusableForm';
 import PropTypes from 'prop-types';
 import { useFirestore } from 'react-redux-firebase';
+import { Container } from '@material-ui/core';
 
 function EditBathroomForm(props) {
 	const firestore = useFirestore();
@@ -27,11 +28,13 @@ function EditBathroomForm(props) {
 
 	return (
 		<React.Fragment>
-			<ReusableForm
-				formSubmissionHandler={handleEditBathroomFormSubmission}
-				buttonText="Update Bathroom"
-				bathroomName={name}
-			/>
+			<Container>
+				<ReusableForm
+					formSubmissionHandler={handleEditBathroomFormSubmission}
+					buttonText="Update Bathroom"
+					bathroomName={name}
+				/>
+			</Container>
 		</React.Fragment>
 	);
 }

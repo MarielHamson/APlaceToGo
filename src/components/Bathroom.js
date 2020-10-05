@@ -4,16 +4,33 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import { withStyles } from '@material-ui/core';
+
+const StyledButton = withStyles({
+	root: {
+		background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+		borderRadius: 3,
+		border: 0,
+		color: '#1e0253',
+		height: 48,
+		padding: '0 30px',
+		boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+	},
+	label: {
+		textTransform: 'capitalize',
+	},
+})(Button);
 
 const useStyles = makeStyles({
 	root: {
-		minWidth: 275,
+		minWidth: 400,
 		// maxWidth: 400,
+		background: 'lightgrey',
 	},
 	title: {
-		fontSize: 14,
+		fontSize: 20,
 	},
 	pos: {
 		marginBottom: 12,
@@ -31,7 +48,7 @@ function Bathroom(props) {
 	return (
 		<React.Fragment>
 			{/* <div onClick={() => props.whenBathroomClicked(props.id)}> */}
-			<Card className={classes.root} variant="outlined">
+			<Card className={classes.root}>
 				<CardContent>
 					{/* <Typography
 						className={classes.title}
@@ -48,14 +65,14 @@ function Bathroom(props) {
 					</Typography>
 				</CardContent>
 				<CardActions>
-					<Button
+					<StyledButton
 						variant="outlined"
 						size="lg"
 						onClick={() => props.whenBathroomClicked(props.id)}
 					>
 						{' '}
 						See Details{' '}
-					</Button>
+					</StyledButton>
 				</CardActions>
 				{/* <Card.Body>
 						<Card.Title className="text-muted">{props.name}</Card.Title>

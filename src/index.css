@@ -20,8 +20,16 @@ h3,
 h4,
 h5,
 p {
-	color: lightcoral;
+	color: #424042;
 	font-family: 'Sacramento', cursive, monospace;
+	font-weight: 500;
+	size: 20px;
+}
+
+.details {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	size: 20px;
 }
 
 .MuiPaper-root {

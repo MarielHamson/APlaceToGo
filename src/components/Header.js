@@ -32,27 +32,17 @@ function Header(props) {
 
 	async function handleSearchQuery(event) {
 		event.preventDefault();
-		const propertiesToQuery = event.target.city.value.toLowerCase();
-
-		// const propertiesToQuery2 = event.target.scents.value.toLowerCase();
-		// .where("scents".toLowerCase(), "==", propertiesToQuery2)
+		const propertiesToQuery = event.target.name.value.toLowerCase();
 
 		const snapshot = await firestore
 			.collection('bathrooms')
-			.where('city', '>=', propertiesToQuery)
-			// .where('city', '<=', propertiesToQuery2)
-			// .where('city', '<=', propertiesToQuery2)
+			.where('name', '>=', propertiesToQuery)
+
 			.get();
 		if (snapshot.empty) {
 			console.log('no matches');
 			return;
 		}
-		// const snapshot2 = await firestore.collection('bathrooms').where("scents", ">=", propertiesToQuery)
-		// .get();
-		// if (snapshot.empty) {
-		//   console.log("no matches");
-		//   return;
-		// }
 
 		const bathroom = snapshot.docs.map((doc) => {
 			const documentId = doc.id;
@@ -60,15 +50,6 @@ function Header(props) {
 			return myObj;
 		});
 
-		// const memory2 = snapshot2.docs.map(doc => {
-		//   const documentId = doc.id;
-		//   const myObj = {documentId, ...doc.data()};
-		//   return myObj;
-		// });
-
-		// const memory3 = {memory, ...memory2};
-
-		// console.log(memory3);
 		props.onSearchQuery(bathroom);
 	}
 

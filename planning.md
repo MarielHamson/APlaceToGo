@@ -57,3 +57,9 @@ review API calls and download JSON
 10/3
 
 11:00 - 12:00 worked on sign out button, read stack overflow
+
+10/4
+
+1:00-1:30 tried to fix sign out bug
+
+3:45- : styling buttons and main page

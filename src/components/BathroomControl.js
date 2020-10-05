@@ -4,11 +4,27 @@ import BathroomList from './BathroomList';
 import BathroomDetail from './BathroomDetail';
 import EditBathroomForm from './EditBathroomForm';
 import { withFirestore, isLoaded } from 'react-redux-firebase';
-import Button from '@material-ui/core/Button';
 import PropTypes from 'prop-types';
 import Header from './Header';
 import Container from 'react-bootstrap/Container';
 import SearchList from './SearchList';
+import Button from '@material-ui/core/Button';
+import { withStyles } from '@material-ui/core';
+
+const StyledButton = withStyles({
+	root: {
+		background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+		borderRadius: 3,
+		border: 0,
+		color: '#1e0253',
+		height: 48,
+		padding: '0 30px',
+		boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+	},
+	label: {
+		textTransform: 'capitalize',
+	},
+})(Button);
 
 class BathroomControl extends React.Component {
 	constructor(props) {
@@ -21,7 +37,7 @@ class BathroomControl extends React.Component {
 		};
 	}
 
-	resetComponent = () => this.setState({ isLoading: false, search: null });
+	// resetComponent = () => this.setState({ isLoading: false, search: null });
 
 	componentDidMount() {
 		const auth = this.props.firebase.auth();
@@ -163,12 +179,11 @@ class BathroomControl extends React.Component {
 			return (
 				<React.Fragment>
 					<Header className="header" onSearchQuery={this.handleSearchQuery} />
-					<Container className="container">
-						{currentlyVisibleState}
-						<Button variant="primary" onClick={this.handleClick}>
-							{buttonText}
-						</Button>
-					</Container>
+					{currentlyVisibleState}
+					<StyledButton variant="primary" onClick={this.handleClick}>
+						{buttonText}
+					</StyledButton>
+					{/* </Container> */}
 				</React.Fragment>
 			);
 		}
