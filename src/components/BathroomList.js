@@ -3,7 +3,7 @@ import Bathroom from './Bathroom';
 import { useSelector } from 'react-redux';
 import { useFirestoreConnect, isLoaded } from 'react-redux-firebase';
 import React, { useState } from 'react';
-import { useTrail, animated } from 'react-spring';
+import { useSpring, animated, config } from 'react-spring';
 import '../index.css';
 import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
@@ -11,8 +11,6 @@ import Paper from '@material-ui/core/Paper';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from 'react-bootstrap/Container';
 
-const items = ['Find A Place To Go'];
-const config = { mass: 5, tension: 2000, friction: 200 };
 const useStyles = makeStyles((theme) => ({
 	root: {
 		height: '100vh',
@@ -39,13 +37,16 @@ const useStyles = makeStyles((theme) => ({
 
 function BathroomList(props) {
 	const classes = useStyles();
-	const [toggle, set] = useState(true);
-	const trail = useTrail(items.length, {
-		config,
-		opacity: toggle ? 1 : 0,
-		x: toggle ? 0 : 20,
-		height: toggle ? 80 : 0,
-		from: { opacity: 0, x: 20, height: 0 },
+
+	const multiAnimation = useSpring({
+		config: config.wobbly,
+		from: { opacity: 0, color: 'red' },
+		to: [
+			{ opacity: 1, color: '#ffaaee' },
+			{ opacity: 1, color: 'red' },
+			{ opacity: 0.5, color: '#008000' },
+			{ opacity: 0.8, color: 'white' },
+		],
 	});
 
 	useFirestoreConnect([{ collection: 'bathrooms' }]);
@@ -56,21 +57,10 @@ function BathroomList(props) {
 		return (
 			<React.Fragment>
 				<Container class="container">
-					<div className="trails-main" onClick={() => set((state) => !state)}>
-						<div>
-							{trail.map(({ x, height, ...rest }, index) => (
-								<animated.div
-									key={items[index]}
-									className="trails-text"
-									style={{
-										...rest,
-										transform: x.interpolate((x) => `translate3d(0,${x}px,0)`),
-									}}
-								>
-									<animated.div style={{ height }}>{items[index]}</animated.div>
-								</animated.div>
-							))}
-						</div>
+					<div id="headline">
+						<animated.h1 style={multiAnimation}>
+							Welcome, Bathroom seeker!
+						</animated.h1>
 					</div>
 					<Grid container component="main" className={classes.root}>
 						<CssBaseline />
