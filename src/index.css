@@ -32,6 +32,19 @@ p {
 	size: 20px;
 }
 
+.MuiPaper-root.MuiGrid-root {
+	background: #1e0253;
+}
+
+.MuiButton-root.WithStyles\(ForwardRef\(Button\)\)-root-6 {
+	display: flex;
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: auto;
+	padding-left: auto;
+	margin-bottom: 3em;
+}
+
 #accessHeadline {
 	color: lightcoral;
 	text-align: center;

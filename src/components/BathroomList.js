@@ -10,18 +10,17 @@ import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from 'react-bootstrap/Container';
-import potty from '../assets/images/potty.jpeg';
 
 const items = ['Find A Place To Go'];
 const config = { mass: 5, tension: 2000, friction: 200 };
 const useStyles = makeStyles((theme) => ({
 	root: {
 		height: '100vh',
-		background: 'lightcoral',
+		backgroundColor: '#1e0253',
 	},
-
 	image: {
-		backgroundImage: 'url(../assets/images/potty.png)',
+		backgroundImage:
+			'url(https://images.unsplash.com/photo-1561115650-d0f216403598?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80)',
 		backgroundRepeat: 'no-repeat',
 		backgroundColor:
 			theme.palette.type === 'light'
@@ -35,10 +34,6 @@ const useStyles = makeStyles((theme) => ({
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
-	},
-	gridContainer: {
-		paddingLeft: '40px',
-		paddingRight: '40px',
 	},
 }));
 

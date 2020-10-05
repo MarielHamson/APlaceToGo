@@ -93,9 +93,11 @@ function ReusableForm(props) {
 							placeholder="Any additional comments?"
 						/>
 					</Form.Group>
-					<StyledButton className="mb-2" variant="info" type="submit">
-						{props.buttonText}
-					</StyledButton>
+					<div id="buttons">
+						<StyledButton className="mb-2" variant="info" type="submit">
+							{props.buttonText}
+						</StyledButton>
+					</div>
 				</Form>
 			</Container>
 		</React.Fragment>
