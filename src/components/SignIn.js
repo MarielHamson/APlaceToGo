@@ -87,6 +87,8 @@ function SignIn() {
 		event.preventDefault();
 		const email = event.target.email.value;
 		const password = event.target.password.value;
+		const nickname = event.target.nickname.value;
+
 		firebase
 			.auth()
 			.createUserWithEmailAndPassword(email, password)
@@ -155,6 +157,18 @@ function SignIn() {
 								id="password"
 								autoComplete="current-password"
 							/>
+							<TextField
+								variant="outlined"
+								margin="normal"
+								required
+								fullWidth
+								name="nickname"
+								label="Name"
+								type="text"
+								id="nickname"
+								autoComplete="nickname"
+							/>
+
 							<StyledButton
 								type="submit"
 								fullWidth
@@ -164,23 +178,12 @@ function SignIn() {
 							>
 								Sign Up
 							</StyledButton>
-							{/* <Button
-							type="submit"
-							fullWidth
-							variant="contained"
-							color="primary"
-							className={classes.submit}
-							onClick={doSignOut}
-						>
-							Sign out
-						</Button> */}
 						</form>
 						<div id="signin">
 							<Typography component="h1" variant="h5">
 								Sign In
 							</Typography>
 						</div>
-						}
 						<form className={classes.form} noValidate onSubmit={doSignIn}>
 							<TextField
 								variant="outlined"

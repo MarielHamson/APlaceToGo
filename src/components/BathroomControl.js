@@ -35,6 +35,7 @@ class BathroomControl extends React.Component {
 			selectedBathroom: null,
 			editing: false,
 			search: null,
+			nickname: 'Bathroom Seeker',
 		};
 	}
 

@@ -5,11 +5,11 @@ import { useFirestoreConnect, isLoaded } from 'react-redux-firebase';
 import React, { useState } from 'react';
 import { useSpring, animated, config } from 'react-spring';
 import '../index.css';
-import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Container from 'react-bootstrap/Container';
+import Grid from '@material-ui/core/Grid';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -59,21 +59,13 @@ function BathroomList(props) {
 				<Container class="container">
 					<div id="headline">
 						<animated.h1 style={multiAnimation}>
-							Welcome, Bathroom seeker!
+							Welcome, Bathroom Seeker!
 						</animated.h1>
 					</div>
 					<Grid container component="main" className={classes.root}>
 						<CssBaseline />
 						<Grid item xs={false} sm={4} md={7} className={classes.image} />
-						<Grid
-							item
-							xs={12}
-							sm={8}
-							md={5}
-							component={Paper}
-							elevation={6}
-							square
-						>
+						<Grid item xs={12} sm={8} md={5}>
 							<div className={classes.paper}>
 								{bathrooms.map((bathroom) => {
 									return (
