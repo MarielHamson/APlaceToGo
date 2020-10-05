@@ -32,12 +32,11 @@ function Header(props) {
 
 	async function handleSearchQuery(event) {
 		event.preventDefault();
-		const propertiesToQuery = event.target.name.value.toLowerCase();
+		const propertiesToQuery = event.target.name.value;
 
 		const snapshot = await firestore
 			.collection('bathrooms')
-			.where('name', '>=', propertiesToQuery)
-
+			.where('name', '==', propertiesToQuery)
 			.get();
 		if (snapshot.empty) {
 			console.log('no matches');

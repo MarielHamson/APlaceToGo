@@ -19,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: '#1e0253',
 	},
 	image: {
-		backgroundImage:
-			'url(https://images.unsplash.com/photo-1561115650-d0f216403598?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80)',
+		backgroundImage: `url(${process.env.PUBLIC_URL}/potty.jpeg)`,
+
 		backgroundRepeat: 'no-repeat',
 		backgroundColor:
 			theme.palette.type === 'light'

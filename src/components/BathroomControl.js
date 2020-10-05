@@ -12,7 +12,6 @@ import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
-import Original from '../assets/images/Original.png';
 
 const StyledButton = withStyles({
 	root: {
@@ -135,7 +134,6 @@ class BathroomControl extends React.Component {
 							<p id="accessHeadline">Welcome to a Place To Go </p>
 							<p id="accessTagline">Please sign in to view the bathroom list</p>
 						</Card>
-						{/* <img id="logo" src={Original} /> */}
 					</Container>
 				</React.Fragment>
 			);
@@ -152,7 +150,7 @@ class BathroomControl extends React.Component {
 			} else if (this.state.search != null) {
 				currentlyVisibleState = (
 					<SearchList
-						onSearchQuery={this.state.search}
+						searchReturn={this.state.search}
 						onBathroomSelection={this.handleChangingSelectedBathroom}
 					/>
 				);

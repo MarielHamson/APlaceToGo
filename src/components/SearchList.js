@@ -4,20 +4,20 @@ import Bathroom from './Bathroom';
 import { useFirestoreConnect, isLoaded } from 'react-redux-firebase';
 
 function SearchList(props) {
-	const { onSearchQuery } = props;
+	const { searchReturn } = props;
 
 	useFirestoreConnect([{ collection: 'bathrooms' }]);
 
-	console.log(onSearchQuery[0].documentId);
+	console.log(searchReturn[0].documentId);
 
 	// onBathroomSelection(id);
 
-	if (isLoaded(onSearchQuery)) {
+	if (isLoaded(searchReturn)) {
 		return (
 			<React.Fragment>
 				<h1 style={{ textAlign: 'center' }}>Search List</h1>
 				<hr />
-				{onSearchQuery.map((bathroom) => {
+				{searchReturn.map((bathroom) => {
 					return (
 						<Bathroom
 							whenBathroomClicked={props.onBathroomSelection}
@@ -48,7 +48,7 @@ function SearchList(props) {
 
 SearchList.propTypes = {
 	onBathroomSelection: PropTypes.func,
-	onSearchQuery: PropTypes.object,
+	searchReturn: PropTypes.object,
 	id: PropTypes.string,
 };
 
