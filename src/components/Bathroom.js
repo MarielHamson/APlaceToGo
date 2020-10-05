@@ -7,7 +7,6 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core';
-import { useHistory } from 'react-router-dom';
 
 const StyledButton = withStyles({
 	root: {
@@ -39,24 +38,12 @@ const useStyles = makeStyles({
 });
 
 function Bathroom(props) {
-	// 	const myStyledList = {
-	// 		listStyle: 'none',
-	// 		cursor: 'pointer',
-	// 	};
 	const classes = useStyles();
 
 	return (
 		<React.Fragment>
-			{/* <div onClick={() => props.whenBathroomClicked(props.id)}> */}
 			<Card className={classes.root}>
 				<CardContent>
-					{/* <Typography
-						className={classes.title}
-						color="textSecondary"
-						gutterBottom
-					>
-						Bathroom
-					</Typography> */}
 					<Typography variant="h5" component="h2">
 						{props.name}
 					</Typography>
@@ -74,17 +61,7 @@ function Bathroom(props) {
 						See Details{' '}
 					</StyledButton>
 				</CardActions>
-				{/* <Card.Body>
-						<Card.Title className="text-muted">{props.name}</Card.Title>
-						<Card.Subtitle className="mb-2 text-muted">
-							{props.street}
-						</Card.Subtitle>
-						<Card.Text className="text-muted">
-							{props.upvote} upvotes{' '}
-						</Card.Text>
-					</Card.Body> */}
 			</Card>
-			{/* </div> */}
 			<hr />
 		</React.Fragment>
 	);

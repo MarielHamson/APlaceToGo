@@ -8,10 +8,6 @@ function SearchList(props) {
 
 	useFirestoreConnect([{ collection: 'bathrooms' }]);
 
-	console.log(searchReturn[0].documentId);
-
-	// onBathroomSelection(id);
-
 	if (isLoaded(searchReturn)) {
 		return (
 			<React.Fragment>

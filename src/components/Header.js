@@ -109,7 +109,6 @@ function Header(props) {
 						<StyledButton type="submit">Search</StyledButton>
 					</Form>
 					<Form inline>
-						{/* insert code to change signout button to sign in and vice versa */}
 						<StyledButton onClick={doSignOut} className="ml-2">
 							Sign Out
 						</StyledButton>

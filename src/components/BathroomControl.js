@@ -10,7 +10,6 @@ import Container from 'react-bootstrap/Container';
 import SearchList from './SearchList';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
 import Card from '@material-ui/core/Card';
 
 const StyledButton = withStyles({

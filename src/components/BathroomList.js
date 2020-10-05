@@ -19,8 +19,7 @@ const useStyles = makeStyles((theme) => ({
 		backgroundColor: '#1e0253',
 	},
 	image: {
-		backgroundImage: `url(${process.env.PUBLIC_URL}/potty.jpeg)`,
-
+		backgroundImage: `url(${process.env.PUBLIC_URL}/Original.png)`,
 		backgroundRepeat: 'no-repeat',
 		backgroundColor:
 			theme.palette.type === 'light'
@@ -34,6 +33,7 @@ const useStyles = makeStyles((theme) => ({
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
+		paddingLeft: '2rem',
 	},
 }));
 

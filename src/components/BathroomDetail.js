@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme) => ({
 		background: '#c637a0',
 	},
 	image: {
-		backgroundImage: 'url(../background.png)',
+		backgroundImage: `url(${process.env.PUBLIC_URL}/potty.jpeg)`,
 		backgroundRepeat: 'no-repeat',
 		backgroundSize: 'cover',
 		backgroundPosition: 'center',
@@ -55,15 +55,7 @@ function BathroomDetail(props) {
 			<Grid container component="main" className={classes.root}>
 				<CssBaseline />
 				<Grid item xs={false} sm={4} md={7} className={classes.image} />
-				<Grid
-					item
-					xs={12}
-					sm={8}
-					md={5}
-					// component={Paper}
-					elevation={6}
-					square
-				>
+				<Grid item xs={12} sm={8} md={5} elevation={6} square>
 					<div className={classes.paper}>
 						<h1>Bathroom Details</h1>
 						<h2 class="details">
@@ -75,10 +67,6 @@ function BathroomDetail(props) {
 						{console.log(bathroom.unisex)}
 						<p class="details">Directions: {bathroom.directions} </p>
 						<p class="details">Comments: {bathroom.comment}</p>
-						<p class="details">Upvotes: {bathroom.upvote}</p>
-						{console.log(bathroom.upvote)}
-						<p class="details">Downvotes: {bathroom.downvote}</p>
-						{console.log(bathroom.downvote)}
 
 						<StyledButton
 							className="mr-2"
@@ -92,7 +80,7 @@ function BathroomDetail(props) {
 					</div>
 				</Grid>
 			</Grid>
-			){/* </Container> */}
+			)
 		</React.Fragment>
 	);
 }

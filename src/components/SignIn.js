@@ -34,7 +34,7 @@ const StyledButton = withStyles({
 
 function Copyright() {
 	return (
-		<Typography variant="body2" color="textSecondary" align="center">
+		<Typography variant="body2" color="lightgrey" align="center">
 			{'Copyright © '}
 			<Link color="inherit" href="https://material-ui.com/">
 				A Place To Go
