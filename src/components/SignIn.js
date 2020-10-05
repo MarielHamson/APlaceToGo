@@ -1,5 +1,4 @@
 import React from 'react';
-import firebase from 'firebase/app';
 import Button from '@material-ui/core/Button';
 import { useHistory } from 'react-router-dom';
 import Header from './Header';
@@ -16,6 +15,7 @@ import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core';
+import firebase from '../firebase';
 
 const StyledButton = withStyles({
 	root: {

@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core';
+import { useHistory } from 'react-router-dom';
 
 const StyledButton = withStyles({
 	root: {

@@ -1,9 +1,10 @@
 import React from 'react';
-import BathroomControl from './BathroomControl';
 import SignIn from './SignIn';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/core/styles';
+import BathroomControl from './BathroomControl';
+import BathroomDetail from './BathroomDetail';
 
 const theme = createMuiTheme({
 	palette: {

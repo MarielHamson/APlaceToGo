@@ -8,8 +8,8 @@ import { useFirestore } from 'react-redux-firebase';
 import { withFirestore } from 'react-redux-firebase';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
-import firebase from 'firebase';
 import { withStyles } from '@material-ui/core';
+import firebase from '../firebase';
 
 const StyledButton = withStyles({
 	root: {
