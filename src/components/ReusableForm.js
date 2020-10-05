@@ -1,10 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from '@material-ui/core/Button';
+import { Container, TextField } from '@material-ui/core';
+import Avatar from '@material-ui/core/Avatar';
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControl from '@material-ui/core/FormControl';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import Link from '@material-ui/core/Link';
+import Grid from '@material-ui/core/Grid';
+import BathtubIcon from '@material-ui/icons/Bathtub';
+import Box from '@material-ui/core/Box';
+import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core';
-import { Container } from '@material-ui/core';
+import Checkbox from '@material-ui/core/Checkbox';
 
 const StyledButton = withStyles({
 	root: {
@@ -21,84 +34,195 @@ const StyledButton = withStyles({
 	},
 })(Button);
 
+function Copyright() {
+	return (
+		<Typography variant="body2" color="textSecondary" align="center">
+			{'Copyright © '}
+			<Link color="inherit" href="https://material-ui.com/">
+				A Place To Go
+			</Link>{' '}
+			{new Date().getFullYear()}
+			{'.'}
+		</Typography>
+	);
+}
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+		height: '100vh',
+		background: '#1e0253',
+		border: '#e9e9e9',
+	},
+	image: {
+		backgroundImage: 'url(https://source.unsplash.com/featured/?{bathroom})',
+		backgroundRepeat: 'no-repeat',
+		backgroundColor:
+			theme.palette.type === 'light'
+				? theme.palette.grey[50]
+				: theme.palette.grey[900],
+		backgroundSize: 'cover',
+		backgroundPosition: 'center',
+	},
+	paper: {
+		margin: theme.spacing(8, 4),
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center',
+	},
+	avatar: {
+		margin: theme.spacing(1),
+		backgroundColor: theme.palette.secondary.main,
+	},
+	form: {
+		width: '75%',
+		marginTop: theme.spacing(1),
+		color: 'lightcoral',
+	},
+	submit: {
+		margin: theme.spacing(3, 0, 2),
+	},
+}));
+
 function ReusableForm(props) {
+	const classes = useStyles();
 	const { bathroomName } = props;
 
 	return (
 		<React.Fragment>
 			<Container>
-				<Form onSubmit={props.formSubmissionHandler}>
-					<Form.Group controlId="bathroomName">
-						<Form.Control
-							type="text"
-							name="name"
-							placeholder="Name"
-							defaultValue={bathroomName}
-						/>
-					</Form.Group>
-					<Form.Group>
-						<Form.Control
-							type="text"
-							name="street"
-							placeholder="Enter the street"
-							defaultValue={props.street}
-						/>
-					</Form.Group>
-					<Form.Group>
-						<Form.Control
-							type="text"
-							name="city"
-							placeholder="City"
-							defaultValue={props.city}
-						/>
-					</Form.Group>
-					<Form.Group>
-						<Form.Control
-							type="text"
-							name="state"
-							placeholder="State"
-							defaultValue={props.state}
-						/>
-					</Form.Group>
+				<Grid container component="main" className={classes.root}>
+					<CssBaseline />
+					<Grid item xs={false} sm={4} md={7} className={classes.image} />
+					<Grid
+						item
+						xs={12}
+						sm={8}
+						md={5}
+						component={Paper}
+						elevation={6}
+						square
+					>
+						<div className={classes.paper}>
+							<Avatar className={classes.avatar}>
+								<BathtubIcon />
+							</Avatar>
+							<form
+								className={classes.form}
+								onSubmit={props.formSubmissionHandler}
+							>
+								<TextField
+									variant="outlined"
+									fullWidth
+									margin="normal"
+									required
+									id="name"
+									name="name"
+									label="Name"
+									autoComplete="name"
+									autoFocus
+									defaultValue={bathroomName}
+									placeholder="Local Supermarket"
+								/>
+								<TextField
+									variant="outlined"
+									margin="normal"
+									fullWidth
+									required
+									label="Street"
+									id="street"
+									name="street"
+									autoComplete="street"
+									autoFocus
+									defaultValue={props.street}
+									placeholder="1000 E Burnside"
+								/>
+								<TextField
+									variant="outlined"
+									margin="normal"
+									fullWidth
+									required
+									id="city"
+									name="city"
+									label="City"
+									autoFocus
+									autoComplete="city"
+									placeholder="Portland"
+									defaultValue={props.city}
+								/>
+								<TextField
+									variant="outlined"
+									margin="normal"
+									fullWidth
+									required
+									id="state"
+									autoFocus
+									autoComplete="state"
+									type="text"
+									name="state"
+									placeholder="Oregon"
+									defaultValue={props.state}
+								/>
 
-					<Form.Group>
-						<Form.Check
-							size="lg"
-							type="checkbox"
-							name="accessible"
-							label="Accessible?"
-							defaultValue="false"
-						/>
-					</Form.Group>
-					<Form.Group>
-						<Form.Check
-							size="lg"
-							type="checkbox"
-							name="unisex"
-							label="Gender Neutral?"
-							defaultValue="false"
-						/>
-					</Form.Group>
-					<Form.Group>
-						<Form.Control
-							as="textarea"
-							name="directions"
-							placeholder="How do you access this bathroom?"
-						/>
-					</Form.Group>
-					<Form.Group>
-						<Form.Control
-							as="textarea"
-							name="comment"
-							placeholder="Any additional comments?"
-						/>
-					</Form.Group>
-					<div id="buttons">
-						<StyledButton className="mb-2" variant="info" type="submit">
-							{props.buttonText}
-						</StyledButton>
-					</div>
-				</Form>
+								<TextField
+									variant="outlined"
+									margin="normal"
+									required
+									id="accessible"
+									fullWidth
+									autoFocus
+									autoComplete="accessible"
+									name="accessible"
+									placeholder="Yes"
+									label="Accessible"
+									defaultValue={props.accessible}
+								/>
+								<TextField
+									variant="outlined"
+									margin="normal"
+									required
+									fullWidth
+									type="text"
+									name="unisex"
+									autoComplete="unisex"
+									label="Gender Neutral"
+									autoFocus
+									placeholder="Yes"
+									defaultValue={props.unisex}
+								/>
+								<TextField
+									variant="outlined"
+									margin="normal"
+									fullWidth
+									required
+									name="directions"
+									label="Directions"
+									placeholder="Restroom is in the back, past the cheese"
+									autoComplete="directions"
+									autoFocus
+								/>
+								<TextField
+									variant="outlined"
+									margin="normal"
+									required
+									fullWidth
+									as="textarea"
+									name="comment"
+									label="Comments"
+									placeholder="The staff is cool even if you don't buy"
+								/>
+								<div id="buttons">
+									<StyledButton className="mb-2" variant="info" type="submit">
+										{props.buttonText}
+									</StyledButton>
+								</div>
+							</form>
+							{/* 
+							<Box mt={8}>
+								<Copyright />
+							</Box> */}
+						</div>
+					</Grid>
+				</Grid>
 			</Container>
 		</React.Fragment>
 	);

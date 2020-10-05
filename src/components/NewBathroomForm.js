@@ -15,12 +15,10 @@ function NewBathroomForm(props) {
 			street: event.target.street.value,
 			city: event.target.city.value,
 			state: event.target.state.value,
-			accessible: event.target.accessible.checked,
-			unisex: event.target.unisex.checked,
+			accessible: event.target.accessible.value,
+			unisex: event.target.unisex.value,
 			directions: event.target.directions.value,
 			comment: event.target.comment.value,
-			downvote: 0,
-			upvote: 0,
 		});
 	}
 

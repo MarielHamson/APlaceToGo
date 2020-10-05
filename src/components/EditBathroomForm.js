@@ -15,8 +15,8 @@ function EditBathroomForm(props) {
 			name: event.target.bathroomName.value,
 			street: event.target.street.value,
 			state: event.target.state.value,
-			accessible: event.target.accessible.checked,
-			unisex: event.target.unisex.checked,
+			accessible: event.target.accessible.value,
+			unisex: event.target.unisex.value,
 			directions: event.target.directions.value,
 			comment: event.target.comment.value,
 		};
