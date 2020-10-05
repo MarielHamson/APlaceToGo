@@ -60,6 +60,7 @@ function Header(props) {
 			.then(function () {
 				console.log('Successfully signed out!');
 				history.push('/');
+				window.location.reload();
 			})
 			.catch(function (error) {
 				console.log(error.message);
