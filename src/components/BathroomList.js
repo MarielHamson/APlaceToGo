@@ -52,7 +52,6 @@ function BathroomList(props) {
 
 	const bathrooms = useSelector((state) => state.firestore.ordered.bathrooms);
 
-	console.log(bathrooms);
 	if (isLoaded(bathrooms)) {
 		return (
 			<React.Fragment>

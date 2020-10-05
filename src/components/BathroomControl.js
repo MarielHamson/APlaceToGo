@@ -103,10 +103,10 @@ class BathroomControl extends React.Component {
 		});
 	};
 
-	// handleDeleteBathroom = (id) => {
-	// 	this.props.firestore.delete({ collection: 'bathrooms', doc: id });
-	// 	this.setState({ selectedBathroom: null });
-	// };
+	handleDeleteBathroom = (id) => {
+		this.props.firestore.delete({ collection: 'bathrooms', doc: id });
+		this.setState({ selectedBathroom: null });
+	};
 
 	handleSearchQuery = (searchObject) => {
 		this.setState({ search: searchObject });

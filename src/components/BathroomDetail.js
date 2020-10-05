@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function BathroomDetail(props) {
-	const { bathroom } = props;
+	const { bathroom, onClickingDelete } = props;
 	const classes = useStyles();
 
 	return (
@@ -62,9 +62,7 @@ function BathroomDetail(props) {
 							{bathroom.name} - {bathroom.street}, {bathroom.state}
 						</h2>
 						<p class="details">Accessible: {bathroom.accessible}</p>
-						{console.log(bathroom.accessible)}
 						<p class="details">Gender Neutral: {bathroom.unisex}</p>
-						{console.log(bathroom.unisex)}
 						<p class="details">Directions: {bathroom.directions} </p>
 						<p class="details">Comments: {bathroom.comment}</p>
 
@@ -74,6 +72,14 @@ function BathroomDetail(props) {
 							onClick={props.onClickingEdit}
 						>
 							Edit Bathroom Details
+						</StyledButton>
+						<br />
+						<StyledButton
+							className="mr-2"
+							variant="info"
+							onClick={() => onClickingDelete(bathroom.id)}
+						>
+							Delete Bathroom from List
 						</StyledButton>
 
 						<hr />

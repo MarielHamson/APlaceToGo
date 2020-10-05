@@ -48,7 +48,7 @@ function Bathroom(props) {
 						{props.name}
 					</Typography>
 					<Typography variant="body2" component="p">
-						{props.street} <br /> {props.upvote} upvotes{' '}
+						{props.street} <br />
 					</Typography>
 				</CardContent>
 				<CardActions>

@@ -127,9 +127,11 @@ function SignIn() {
 						<Avatar className={classes.avatar}>
 							<LockOutlinedIcon />
 						</Avatar>
-						<Typography component="h1" variant="h5">
-							Sign Up
-						</Typography>
+						<div id="signup">
+							<Typography component="h1" variant="h5">
+								Sign Up
+							</Typography>
+						</div>
 						<form className={classes.form} noValidate onSubmit={doSignUp}>
 							<TextField
 								variant="outlined"
@@ -173,9 +175,12 @@ function SignIn() {
 							Sign out
 						</Button> */}
 						</form>
-						<Typography component="h1" variant="h5">
-							Sign In
-						</Typography>
+						<div id="signin">
+							<Typography component="h1" variant="h5">
+								Sign In
+							</Typography>
+						</div>
+						}
 						<form className={classes.form} noValidate onSubmit={doSignIn}>
 							<TextField
 								variant="outlined"
