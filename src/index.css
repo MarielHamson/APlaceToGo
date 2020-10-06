@@ -67,6 +67,9 @@ p {
 	margin-top: 3em;
 }
 
+.mat-tooltip {
+	font-size: 20px !important;
+}
 img {
 	cursor: pointer;
 }

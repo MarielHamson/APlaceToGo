@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core';
 import address from './../assets/images/address.png';
+import Tooltip from '@material-ui/core/Tooltip';
 
 const StyledButton = withStyles({
 	root: {
@@ -61,12 +62,12 @@ function Bathroom(props) {
 						{' '}
 						See Details{' '}
 					</StyledButton> */}
-
-					<img
-						src={address}
-						label="Details"
-						onClick={() => props.whenBathroomClicked(props.id)}
-					/>
+					<Tooltip title="Details" arrow>
+						<img
+							src={address}
+							onClick={() => props.whenBathroomClicked(props.id)}
+						/>
+					</Tooltip>
 				</CardActions>
 			</Card>
 			<hr />

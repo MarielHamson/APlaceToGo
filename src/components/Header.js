@@ -102,7 +102,7 @@ function Header(props) {
 						<Form.Control
 							type="text"
 							name="name"
-							placeholder="Search bathrooms"
+							placeholder="Search bathroom name"
 							className="mr-sm-2"
 						/>
 
