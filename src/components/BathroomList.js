@@ -42,9 +42,9 @@ function BathroomList(props) {
 		config: config.wobbly,
 		from: { opacity: 0, color: 'red' },
 		to: [
-			{ opacity: 1, color: '#ffaaee' },
-			{ opacity: 1, color: 'red' },
-			{ opacity: 0.5, color: '#008000' },
+			{ opacity: 1, color: '#000000' },
+			{ opacity: 1, color: '#1f0253' },
+			{ opacity: 0.5, color: '#003977' },
 			{ opacity: 0.8, color: 'white' },
 		],
 	});
@@ -56,12 +56,12 @@ function BathroomList(props) {
 	if (isLoaded(bathrooms)) {
 		return (
 			<React.Fragment>
+				<div id="headline">
+					<animated.h1 style={multiAnimation}>
+						Welcome, Bathroom Seeker!
+					</animated.h1>
+				</div>
 				<Container class="container">
-					<div id="headline">
-						<animated.h1 style={multiAnimation}>
-							Welcome, Bathroom Seeker!
-						</animated.h1>
-					</div>
 					<Grid container component="main" className={classes.root}>
 						<CssBaseline />
 						<Grid item xs={false} sm={4} md={7} className={classes.image} />

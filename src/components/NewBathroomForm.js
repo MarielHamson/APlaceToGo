@@ -28,7 +28,6 @@ function NewBathroomForm(props) {
 				formSubmissionHandler={addBathroomToFirestore}
 				buttonText="Add Bathroom"
 			/>
-			{console.log(props.accessible)}
 		</React.Fragment>
 	);
 }

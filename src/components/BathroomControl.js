@@ -115,7 +115,7 @@ class BathroomControl extends React.Component {
 
 	render() {
 		let currentlyVisibleState = null;
-		let buttonText = null;
+		let buttonText = 'null';
 		const auth = this.props.firebase.auth();
 
 		if (!isLoaded(auth)) {
