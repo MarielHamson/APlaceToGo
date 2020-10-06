@@ -38,10 +38,10 @@ function Header(props) {
 			.collection('bathrooms')
 			.where('name', '==', propertiesToQuery)
 			.get();
-		if (snapshot.empty) {
-			console.log('no matches');
-			return;
-		}
+		// if (snapshot.empty) {
+		// 	console.log('no matches');
+		// 	return;
+		// }
 
 		const bathroom = snapshot.docs.map((doc) => {
 			const documentId = doc.id;
@@ -102,7 +102,7 @@ function Header(props) {
 						<Form.Control
 							type="text"
 							name="name"
-							placeholder="Search bathroom name"
+							placeholder="Search bathroom"
 							className="mr-sm-2"
 						/>
 

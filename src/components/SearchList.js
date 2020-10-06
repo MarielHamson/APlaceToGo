@@ -2,13 +2,37 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Bathroom from './Bathroom';
 import { useFirestoreConnect, isLoaded } from 'react-redux-firebase';
+import Card from '@material-ui/core/Card';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core';
+import CardContent from '@material-ui/core/CardContent';
+const useStyles = makeStyles({
+	root: {
+		minWidth: 200,
+		// maxWidth: 400,
+		background: 'lightgrey',
+		marginLeft: '20rem',
+		marginRight: '20rem',
+		marginTop: '10rem',
+		marginBottom: '10rem',
+	},
+	title: {
+		fontSize: 20,
+		fontFamily: 'Sacramento, cursive, monospace',
+		textAlign: 'center',
+	},
+	pos: {
+		marginBottom: 12,
+	},
+});
 
 function SearchList(props) {
 	const { searchReturn } = props;
+	const classes = useStyles();
 
 	useFirestoreConnect([{ collection: 'bathrooms' }]);
 
-	if (isLoaded(searchReturn)) {
+	if (isLoaded(searchReturn) && searchReturn.length != 0) {
 		return (
 			<React.Fragment>
 				<h1 style={{ textAlign: 'center' }}>Search List</h1>
@@ -31,6 +55,16 @@ function SearchList(props) {
 						/>
 					);
 				})}
+			</React.Fragment>
+		);
+	} else if (isLoaded(searchReturn)) {
+		return (
+			<React.Fragment>
+				<Card className={classes.root}>
+					<CardContent>
+						<div id="results">No Results!</div>
+					</CardContent>
+				</Card>
 			</React.Fragment>
 		);
 	} else {

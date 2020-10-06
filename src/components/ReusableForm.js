@@ -29,7 +29,7 @@ const StyledButton = withStyles({
 const useStyles = makeStyles((theme) => ({
 	root: {
 		height: '100vh',
-		// background: '#1e0253',
+		background: '#1e0253',
 		border: '#e9e9e9',
 	},
 	image: {

@@ -31,6 +31,14 @@ p {
 	color: #e9e9e9;
 }
 
+#results {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 500;
+	size: 30px;
+	text-align: center;
+	margin: 3rem;
+}
+
 #headline {
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 500;
