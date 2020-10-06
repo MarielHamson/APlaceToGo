@@ -60,11 +60,15 @@ p {
 .MuiButton-root.WithStyles\(ForwardRef\(Button\)\)-root-6 {
 	display: flex;
 	margin-left: auto;
-	margin-right: auto;
-	padding-right: auto;
+	margin-right: 7rem;
+	padding-right: 0.25;
 	padding-left: auto;
 	margin-bottom: 3em;
 	margin-top: 3em;
+}
+
+img {
+	cursor: pointer;
 }
 
 #accessHeadline {

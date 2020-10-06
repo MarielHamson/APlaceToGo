@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core';
+import address from './../assets/images/address.png';
 
 const StyledButton = withStyles({
 	root: {
@@ -52,14 +53,20 @@ function Bathroom(props) {
 					</Typography>
 				</CardContent>
 				<CardActions>
-					<StyledButton
+					{/* <StyledButton
 						variant="outlined"
 						size="lg"
 						onClick={() => props.whenBathroomClicked(props.id)}
 					>
 						{' '}
 						See Details{' '}
-					</StyledButton>
+					</StyledButton> */}
+
+					<img
+						src={address}
+						label="Details"
+						onClick={() => props.whenBathroomClicked(props.id)}
+					/>
 				</CardActions>
 			</Card>
 			<hr />
