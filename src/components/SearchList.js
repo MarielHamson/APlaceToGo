@@ -35,26 +35,38 @@ function SearchList(props) {
 	if (isLoaded(searchReturn) && searchReturn.length != 0) {
 		return (
 			<React.Fragment>
-				<h1 style={{ textAlign: 'center' }}>Search List</h1>
+				<h1
+					style={{
+						textAlign: 'center',
+						marginTop: '3rem',
+						color: 'white',
+					}}
+				>
+					Search List
+				</h1>
 				<hr />
-				{searchReturn.map((bathroom) => {
-					return (
-						<Bathroom
-							whenBathroomClicked={props.onBathroomSelection}
-							name={bathroom.name}
-							street={bathroom.street}
-							state={bathroom.state}
-							accessible={bathroom.accessible}
-							unisex={bathroom.unisex}
-							directions={bathroom.directions}
-							comment={bathroom.comment}
-							upvote={bathroom.upvote}
-							downvote={bathroom.downvote}
-							id={bathroom.documentId}
-							key={bathroom.documentId}
-						/>
-					);
-				})}
+				<Card className={classes.root}>
+					<CardContent>
+						{searchReturn.map((bathroom) => {
+							return (
+								<Bathroom
+									whenBathroomClicked={props.onBathroomSelection}
+									name={bathroom.name}
+									street={bathroom.street}
+									state={bathroom.state}
+									accessible={bathroom.accessible}
+									unisex={bathroom.unisex}
+									directions={bathroom.directions}
+									comment={bathroom.comment}
+									upvote={bathroom.upvote}
+									downvote={bathroom.downvote}
+									id={bathroom.documentId}
+									key={bathroom.documentId}
+								/>
+							);
+						})}
+					</CardContent>
+				</Card>
 			</React.Fragment>
 		);
 	} else if (isLoaded(searchReturn)) {
