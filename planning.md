@@ -64,4 +64,10 @@ review API calls and download JSON
 
 3:45- : 5:00 styling buttons and main page
 
-7:15 - 10:45 tried something new with bathroom ID to create a different route in order to get the brand logo to redirect correctly. Didn't work so reverted.
+7:15 - 10:45 tried something new with bathroom ID to create a different route in order to get the brand logo to redirect correctly when on details page. Didn't work so reverted.
+
+---
+
+10/6
+
+8:00 - 10:00am researched testing with JEST to refamiliarize myself (went down a couple rabbit holes) Unsure if i still want to implement testing over other features.

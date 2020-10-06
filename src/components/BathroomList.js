@@ -14,20 +14,20 @@ import Paper from '@material-ui/core/Paper';
 const useStyles = makeStyles((theme) => ({
 	root: {
 		height: '100vh',
-		backgroundColor: '#1e0253',
+		// backgroundColor: '#1e0253',
 	},
 	image: {
 		backgroundImage: `url(${process.env.PUBLIC_URL}/Original.png)`,
 		backgroundRepeat: 'no-repeat',
-		backgroundColor:
-			theme.palette.type === 'light'
-				? theme.palette.grey[50]
-				: theme.palette.grey[900],
-		backgroundSize: 'cover',
-		backgroundPosition: 'center',
+		// backgroundColor:
+		// 	theme.palette.type === 'light'
+		// 		? theme.palette.grey[50]
+		// 		: theme.palette.grey[900],
+		// backgroundSize: 'cover',
+		backgroundPosition: 'top',
 	},
 	paper: {
-		margin: theme.spacing(8, 4),
+		// margin: theme.spacing(8, 4),
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',

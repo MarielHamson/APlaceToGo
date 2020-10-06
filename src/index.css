@@ -1,5 +1,4 @@
 html {
-	background: #1e0253 no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -7,11 +6,13 @@ html {
 }
 
 body {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url(../src/assets/images/background80.jpg) no-repeat center center fixed,
+		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 	margin: 0;
 	font-family: 'Sacramento', cursive, monospace;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background: #1e0253 !important;
 }
 
 h1,
@@ -35,6 +36,7 @@ p {
 	font-weight: 500;
 	size: 20px;
 	text-align: center;
+	margin-bottom: 3rem;
 }
 
 #signin .MuiTypography-h5 {
@@ -94,10 +96,6 @@ code {
 	font-family: 'Sacramento', cursive, monospace;
 }
 
-.root {
-	background: '#1e0253';
-}
-
 .card {
 	color: blue;
 }
@@ -109,7 +107,7 @@ code {
 	max-width: 600px;
 	padding: 50px;
 	padding-top: 50px;
-	background: #1e0253;
+	/* background: #1e0253; */
 	font-family: 'Montserrat', sans-serif;
 }
 

@@ -224,7 +224,7 @@ function SignIn() {
 						<Grid container>
 							<Grid item xs>
 								<Link href="#" variant="body2">
-									Forgot password?
+									Forgot password? That sucks.
 								</Link>
 								<Grid item>
 									<Link href="#" variant="body2">
