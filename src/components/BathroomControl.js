@@ -10,7 +10,6 @@ import Container from 'react-bootstrap/Container';
 import SearchList from './SearchList';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core';
-import Card from '@material-ui/core/Card';
 
 const StyledButton = withStyles({
 	root: {
@@ -35,7 +34,6 @@ class BathroomControl extends React.Component {
 			selectedBathroom: null,
 			editing: false,
 			search: null,
-			nickname: 'Bathroom Seeker',
 		};
 	}
 

@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import Bathroom from './Bathroom';
 import { useFirestoreConnect, isLoaded } from 'react-redux-firebase';
 import Card from '@material-ui/core/Card';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core';
 import CardContent from '@material-ui/core/CardContent';
 const useStyles = makeStyles({
@@ -32,7 +31,7 @@ function SearchList(props) {
 
 	useFirestoreConnect([{ collection: 'bathrooms' }]);
 
-	if (isLoaded(searchReturn) && searchReturn.length != 0) {
+	if (isLoaded(searchReturn) && searchReturn.length !== 0) {
 		return (
 			<React.Fragment>
 				<h1

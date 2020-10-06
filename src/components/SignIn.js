@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import { useHistory } from 'react-router-dom';
 import Header from './Header';
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
 		background: '#1e0253',
 	},
 	image: {
-		backgroundImage: 'url(https://source.unsplash.com/featured/?{bathroom})',
+		backgroundImage: `url(${process.env.PUBLIC_URL}/ocean.jpeg)`,
 		backgroundRepeat: 'no-repeat',
 		backgroundColor:
 			theme.palette.type === 'light'
@@ -82,6 +82,7 @@ const useStyles = makeStyles((theme) => ({
 
 function SignIn() {
 	const classes = useStyles();
+	const [error, setError] = useState(null);
 
 	function doSignUp(event) {
 		event.preventDefault();
@@ -92,6 +93,7 @@ function SignIn() {
 			.auth()
 			.createUserWithEmailAndPassword(email, password)
 			.then(function () {
+				setError(null);
 				firebase
 					.auth()
 					.signInWithEmailAndPassword(email, password)
@@ -99,8 +101,8 @@ function SignIn() {
 						history.push('/');
 					});
 			})
-			.catch(function (error) {
-				console.log(error.message);
+			.catch((error) => {
+				setError(error);
 			});
 	}
 
@@ -112,11 +114,11 @@ function SignIn() {
 			.auth()
 			.signInWithEmailAndPassword(email, password)
 			.then(function () {
-				console.log('Successfully signed in!');
+				setError(null);
 				history.push('/');
 			})
-			.catch(function (error) {
-				console.log(error.message);
+			.catch((error) => {
+				setError(error);
 			});
 	}
 
@@ -138,7 +140,7 @@ function SignIn() {
 								Sign Up
 							</Typography>
 						</div>
-						<form className={classes.form} noValidate onSubmit={doSignUp}>
+						<form className={classes.form} validate onSubmit={doSignUp}>
 							<TextField
 								variant="outlined"
 								margin="normal"
@@ -161,7 +163,6 @@ function SignIn() {
 								id="password"
 								autoComplete="current-password"
 							/>
-
 							<StyledButton
 								type="submit"
 								fullWidth
@@ -171,13 +172,14 @@ function SignIn() {
 							>
 								Sign Up
 							</StyledButton>
+							{error && error.message}
 						</form>
 						<div id="signin">
 							<Typography component="h1" variant="h5">
 								Sign In
 							</Typography>
 						</div>
-						<form className={classes.form} noValidate onSubmit={doSignIn}>
+						<form className={classes.form} validate onSubmit={doSignIn}>
 							<TextField
 								variant="outlined"
 								margin="normal"
@@ -213,6 +215,7 @@ function SignIn() {
 							>
 								Sign In
 							</StyledButton>
+							{error && error.message}
 						</form>
 						<Grid container>
 							<Grid item xs>
@@ -235,5 +238,4 @@ function SignIn() {
 		</React.Fragment>
 	);
 }
-
 export default SignIn;

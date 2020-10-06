@@ -2,14 +2,13 @@ import PropTypes from 'prop-types';
 import Bathroom from './Bathroom';
 import { useSelector } from 'react-redux';
 import { useFirestoreConnect, isLoaded } from 'react-redux-firebase';
-import React, { useState } from 'react';
+import React from 'react';
 import { useSpring, animated, config } from 'react-spring';
 import '../index.css';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from 'react-bootstrap/Container';
 import Grid from '@material-ui/core/Grid';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
