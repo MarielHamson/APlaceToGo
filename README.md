@@ -6,7 +6,6 @@ A Place To Go  <br>
 </h1>
 
 <h4 align="center">Crowd-sourced safe restroom database for when you need to go </h4>
-
 <p align="center">
 <a href="#description">Description</a> •
   <a href="#key-features">Key Features</a> •
