@@ -14,7 +14,6 @@ const StyledButton = withStyles({
 		background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
 		borderRadius: 3,
 		border: 0,
-		// color: '#1e0253',
 		height: 48,
 		padding: '0 30px',
 		boxShadow: 'inset (0, 0, 50px, #fff)',
@@ -33,7 +32,6 @@ const StyledButton = withStyles({
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		// height: '100vh',
 		background: `url(${process.env.PUBLIC_URL}/background80.jpg)`,
 		size: '20px',
 		overflowY: 'scroll',
@@ -42,7 +40,6 @@ const useStyles = makeStyles((theme) => ({
 	paper: {
 		margin: theme.spacing(8, 4),
 		display: 'flex',
-		// flexDirection: 'column',
 		alignItems: 'right',
 		background: `url(${process.env.PUBLIC_URL}/background80.jpg)`,
 		fontFamily: 'Montserrat',

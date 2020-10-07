@@ -16,7 +16,6 @@ const StyledButton = withStyles({
 		background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
 		borderRadius: 3,
 		border: 0,
-		// color: '#1e0253',
 		height: 48,
 		padding: '0 30px',
 		boxShadow: 'inset (0, 0, 50px, #fff)',
@@ -27,7 +26,6 @@ const StyledButton = withStyles({
 		boxShadow: '0 0 50px #fff',
 		boxShadow: '-10px 0 80px #f0f',
 		boxShadow: '10px 0 80px #0ff',
-
 		margin: 'auto',
 	},
 
