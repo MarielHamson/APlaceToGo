@@ -13,33 +13,26 @@ import Grid from '@material-ui/core/Grid';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper';
 
-const StyledButton = withStyles({
-	root: {
-		background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
-		borderRadius: 3,
-		border: 0,
-		color: '#1e0253',
-		height: 48,
-		padding: '0 30px',
-		boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
-	},
-	label: {
-		textTransform: 'capitalize',
-	},
-})(Button);
-
 const useStyles = makeStyles((theme) => ({
 	root: {
-		flexGrow: 1,
+		// flexGrow: 1,
+		background: '#e9e9e9, opacity: 100%',
+		opacity: '.75',
 	},
 	title: {
 		fontSize: 20,
 	},
-	// paper: {
-	// 	padding: theme.spacing(2),
-	// 	textAlign: 'center',
-	// 	color: theme.palette.text.secondary,
-	// },
+	paper: {
+		padding: theme.spacing(2),
+		textAlign: 'center',
+		color: theme.palette.text.secondary,
+	},
+	image: {
+		display: 'block',
+		marginLeft: 'auto',
+		marginRight: 'auto',
+		width: '50%',
+	},
 }));
 
 function Bathroom(props) {
@@ -47,42 +40,29 @@ function Bathroom(props) {
 
 	return (
 		<React.Fragment>
-			{/* <Grid container component="main" className={classes.root} spacing={10}>
-				<CssBaseline />
-				<Grid item med={false} sm={4} md={7} className={classes.image} />
-				<Grid item med={12} sm={8} md={5} spacing={3}> */}
-			{/* <div className={classes.paper}> */}
-			<Card className={classes.root}>
-				<CardContent>
-					<Typography variant="h5" component="h2">
-						{props.name}
-					</Typography>
-					<Typography variant="body2" component="p">
-						{props.street} <br />
-					</Typography>
-				</CardContent>
-				<CardActions>
-					<StyledButton
-						variant="outlined"
-						size="lg"
-						onClick={() => props.whenBathroomClicked(props.id)}
-					>
-						{' '}
-						See Details{' '}
-					</StyledButton>
-					<Tooltip title="Details" arrow>
-						<img
-							src={address}
-							alt="address"
-							onClick={() => props.whenBathroomClicked(props.id)}
-						/>
-					</Tooltip>
-				</CardActions>
-			</Card>
-			<hr />
-			{/* </div> */}
-			{/* </Grid>
-			</Grid> */}
+			<div className={classes.paper}>
+				<Card className={classes.root}>
+					<CardContent>
+						<Typography variant="h5" component="h2">
+							{props.name}
+						</Typography>
+						<Typography variant="body2" component="p">
+							{props.street} <br />
+						</Typography>
+					</CardContent>
+					<CardActions>
+						<Tooltip title="Details" arrow>
+							<img
+								className={classes.image}
+								src={address}
+								alt="address"
+								onClick={() => props.whenBathroomClicked(props.id)}
+							/>
+						</Tooltip>
+					</CardActions>
+				</Card>
+				<hr />
+			</div>
 		</React.Fragment>
 	);
 }
