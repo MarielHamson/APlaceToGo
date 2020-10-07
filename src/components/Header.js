@@ -19,7 +19,14 @@ const StyledButton = withStyles({
 		// color: '#1e0253',
 		height: 48,
 		padding: '0 30px',
-		boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+		boxShadow: 'inset (0, 0, 50px, #fff)',
+		boxShadow: 'inset (20px, 0, 80px, #f0f)',
+		boxShadow: 'inset (-20px, 0, 80px, #0ff)',
+		boxShadow: 'inset (20px, 0, 300px, #f0f)',
+		boxShadow: 'inset (-20px, 0, 300px, #0ff)',
+		boxShadow: '0 0 50px #fff',
+		boxShadow: '-10px 0 80px #f0f',
+		boxShadow: '10px 0 80px #0ff',
 	},
 	label: {
 		textTransform: 'capitalize',
@@ -38,10 +45,6 @@ function Header(props) {
 			.collection('bathrooms')
 			.where('name', '==', propertiesToQuery)
 			.get();
-		// if (snapshot.empty) {
-		// 	console.log('no matches');
-		// 	return;
-		// }
 
 		const bathroom = snapshot.docs.map((doc) => {
 			const documentId = doc.id;

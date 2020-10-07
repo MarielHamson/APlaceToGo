@@ -17,7 +17,15 @@ const useStyles = makeStyles((theme) => ({
 	root: {
 		// flexGrow: 1,
 		background: '#e9e9e9, opacity: 100%',
-		opacity: '.75',
+		opacity: '.85',
+		// boxShadow: 'inset (0, 0, 50px, #fff)',
+		// boxShadow: 'inset (20px, 0, 80px, #f0f)',
+		// boxShadow: 'inset (-20px, 0, 80px, #0ff)',
+		// boxShadow: 'inset (20px, 0, 300px, #f0f)',
+		// boxShadow: 'inset (-20px, 0, 300px, #0ff)',
+		// boxShadow: '0 0 50px #fff',
+		// boxShadow: '-10px 0 80px #f0f',
+		// boxShadow: '10px 0 80px #0ff',
 	},
 	title: {
 		fontSize: 20,

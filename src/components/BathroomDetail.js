@@ -17,7 +17,14 @@ const StyledButton = withStyles({
 		// color: '#1e0253',
 		height: 48,
 		padding: '0 30px',
-		boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+		boxShadow: 'inset (0, 0, 50px, #fff)',
+		boxShadow: 'inset (20px, 0, 80px, #f0f)',
+		boxShadow: 'inset (-20px, 0, 80px, #0ff)',
+		boxShadow: 'inset (20px, 0, 300px, #f0f)',
+		boxShadow: 'inset (-20px, 0, 300px, #0ff)',
+		boxShadow: '0 0 50px #fff',
+		boxShadow: '-10px 0 80px #f0f',
+		boxShadow: '10px 0 80px #0ff',
 	},
 	label: {
 		textTransform: 'capitalize',
@@ -29,6 +36,14 @@ const useStyles = makeStyles((theme) => ({
 		height: '100vh',
 		background: `url(${process.env.PUBLIC_URL}/background80.jpg)`,
 		size: '20px',
+		// boxShadow: 'inset (0, 0, 50px, #fff)',
+		// boxShadow: 'inset (20px, 0, 80px, #f0f)',
+		// boxShadow: 'inset (-20px, 0, 80px, #0ff)',
+		// boxShadow: 'inset (20px, 0, 300px, #f0f)',
+		// boxShadow: 'inset (-20px, 0, 300px, #0ff)',
+		// boxShadow: '0 0 50px #fff',
+		// boxShadow: '-10px 0 80px #f0f',
+		// boxShadow: '10px 0 80px #0ff',
 	},
 	// image: {
 	// 	backgroundImage: `url(${process.env.PUBLIC_URL}/potty.jpeg)`,
@@ -66,7 +81,6 @@ function BathroomDetail(props) {
 		<React.Fragment>
 			<Container>
 				<Grid container component="main" className={classes.root}>
-					{/* <Grid item xs={false} sm={4} md={7} className={classes.image} /> */}
 					<Grid item xs={12} sm={8} md={5} elevation={6} square>
 						<div className={classes.paper}>
 							<Card className={classes.root}>
