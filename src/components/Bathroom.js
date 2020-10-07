@@ -51,59 +51,38 @@ function Bathroom(props) {
 				<CssBaseline />
 				<Grid item med={false} sm={4} md={7} className={classes.image} />
 				<Grid item med={12} sm={8} md={5} spacing={3}>
-					<div className={classes.paper}></div>
-					<Card className={classes.root}>
-						<CardContent>
-							<Typography variant="h5" component="h2">
-								{props.name}
-							</Typography>
-							<Typography variant="body2" component="p">
-								{props.street} <br />
-							</Typography>
-						</CardContent>
-						<CardActions>
-							<StyledButton
-								variant="outlined"
-								size="lg"
-								onClick={() => props.whenBathroomClicked(props.id)}
-							>
-								{' '}
-								See Details{' '}
-							</StyledButton>
-							<Tooltip title="Details" arrow>
-								<img
-									src={address}
-									alt="address"
+					<div className={classes.paper}>
+						<Card className={classes.root}>
+							<CardContent>
+								<Typography variant="h5" component="h2">
+									{props.name}
+								</Typography>
+								<Typography variant="body2" component="p">
+									{props.street} <br />
+								</Typography>
+							</CardContent>
+							<CardActions>
+								<StyledButton
+									variant="outlined"
+									size="lg"
 									onClick={() => props.whenBathroomClicked(props.id)}
-								/>
-							</Tooltip>
-						</CardActions>
-					</Card>
-					<hr />
+								>
+									{' '}
+									See Details{' '}
+								</StyledButton>
+								<Tooltip title="Details" arrow>
+									<img
+										src={address}
+										alt="address"
+										onClick={() => props.whenBathroomClicked(props.id)}
+									/>
+								</Tooltip>
+							</CardActions>
+						</Card>
+						<hr />
+					</div>
 				</Grid>
 			</Grid>
-
-			{/* <Grid item med>
-					<Paper className={classes.paper}>med</Paper>
-				</Grid>
-				<Grid item med>
-					<Paper className={classes.paper}>med</Paper>
-				</Grid>
-				<Grid item med>
-					<Paper className={classes.paper}>med</Paper>
-				</Grid>
-			</Grid>
-			<Grid container spacing={10}>
-				<Grid item med>
-					<Paper className={classes.paper}>med</Paper>
-				</Grid>
-				<Grid item med={6}>
-					<Paper className={classes.paper}>med=6</Paper>
-				</Grid>
-				<Grid item med>
-					<Paper className={classes.paper}>med</Paper>
-				</Grid>
-			</Grid> */}
 		</React.Fragment>
 	);
 }
