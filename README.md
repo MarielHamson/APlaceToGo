@@ -5,7 +5,7 @@
 A Place To Go  <br>
 </h1>
 
-<h4 align="center">Safe restroom searcher for when you need to go (safely)</h4>
+<h4 align="center">Crowd-sourced safe restroom database for when you need to go </h4>
 
 <p align="center">
 <a href="#description">Description</a> •
@@ -23,15 +23,15 @@ Finding a safe restroom while out-and-about can be challenging for certain commu
 
 ## Key Features
 
-- Search by keyword or location
+- Search by name of restroom
 - Easy to use Navigation Bar
-- Register/Login to account for chat feature (coming soon!)
-- See all safe restrooms listed in your area
-- Edit database entries
-- Add comments/reviews of bathrooms
-- Add a restroom
+- Register/Login to account
+- See all restrooms you've added to your safe list
+- Add a bathroom
+- Edit entries
+- Add comments to bathrooms
+- Delete a bathroom
 - Request a buddy (coming soon!)
-- Mobile Responsive Site
 
 - Cross platform
   - Windows, macOS and Linux ready.
@@ -44,31 +44,35 @@ Finding a safe restroom while out-and-about can be challenging for certain commu
 
 ## How To Use
 
-To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/download/) and [NPM] (https://www.npmjs.com/get-npm) installed. If you wish to review the raw code, it's easiest to download a code editor such as Visual Studio Code or Atom. Alternatively, you can visit the live site and check it out:
+(3 methods)
 
-### Clone this repository from your Command Line:
+1. [Visit the site](https://a-place-to-go-d3310.firebaseapp.com/)
 
-`$ git clone https://github.com/MarielHamson/APlaceToGo.git`
+2. To clone and run this application, you'll need [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/download/) and [NPM](https://www.npmjs.com/get-npm) installed.
 
-From your command line:
+3. If you wish to review the raw code, it's easiest to download a code editor such as Visual Studio Code or Atom and follow these steps:
 
-# Go into the repository
+   ### Clone this repository from your Command Line:
 
-`$ cd APlaceToGo`
+   `$ git clone https://github.com/MarielHamson/APlaceToGo.git`
 
-# Open repository in VS Code or other
+   From your command line:
 
-`$ code .`
+   ### Go into the repository
 
-# Install dependencies in Root Project Directory (HairSalon)
+   `$ cd APlaceToGo`
 
-`$ npm install`
-`$ npm install redux`
-`$ npm install ???`
+   ### Open repository in VS Code or other
 
-# Run the app
+   `$ code .`
 
-`$ npm start`
+   ### Install dependencies in Root Project Directory (a-place-to-go)
+
+   `$ npm install`
+
+   ### Run the app
+
+   `$ npm start`
 
 ## Reach Out
 
@@ -78,11 +82,13 @@ A Place To Go is [emailware](https://en.wiktionary.org/wiki/emailware). Meaning,
 
 This software uses the following technologies:
 
-- Javascript
+- Javascript (JSX)
 - React with Redux
-- Firebase/Firestore
+- Firebase with Firestore
+- React-Spring
+- Moment.js
+- Font Awesome
 - Webpack
-- JEST testing
 - Material UI
 
 ## Support
