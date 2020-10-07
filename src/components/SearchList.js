@@ -5,6 +5,9 @@ import { useFirestoreConnect, isLoaded } from 'react-redux-firebase';
 import Card from '@material-ui/core/Card';
 import { makeStyles } from '@material-ui/core';
 import CardContent from '@material-ui/core/CardContent';
+import { useHistory } from 'react-router-dom';
+import { useFirestore } from 'react-redux-firebase';
+
 const useStyles = makeStyles({
 	root: {
 		minWidth: 200,
@@ -26,10 +29,31 @@ const useStyles = makeStyles({
 });
 
 function SearchList(props) {
+	const history = useHistory();
+	const firestore = useFirestore();
 	const { searchReturn } = props;
 	const classes = useStyles();
 
 	useFirestoreConnect([{ collection: 'bathrooms' }]);
+
+	async function handleSearchQuery(event) {
+		event.preventDefault();
+		const propertiesToQuery = event.target.name.value;
+
+		const snapshot = await firestore
+			.collection('bathrooms')
+			.where('name', '>=', propertiesToQuery)
+			.where('name', '<=', propertiesToQuery + '\uf8ff')
+			.get();
+
+		const bathroom = snapshot.docs.map((doc) => {
+			const documentId = doc.id;
+			const myObj = { documentId, ...doc.data() };
+			return myObj;
+		});
+
+		props.onSearchQuery(bathroom);
+	}
 
 	if (isLoaded(searchReturn) && searchReturn.length !== 0) {
 		return (

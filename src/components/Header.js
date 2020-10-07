@@ -43,7 +43,8 @@ function Header(props) {
 
 		const snapshot = await firestore
 			.collection('bathrooms')
-			.where('name', '==', propertiesToQuery)
+			.where('name', '>=', propertiesToQuery)
+			.where('name', '<=', propertiesToQuery + '\uf8ff')
 			.get();
 
 		const bathroom = snapshot.docs.map((doc) => {

@@ -15,7 +15,6 @@ import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		// flexGrow: 1,
 		background: '#e9e9e9, opacity: 100%',
 		opacity: '.85',
 		boxShadow: 'inset (0, 0, 50px, #fff)',
