@@ -35,11 +35,11 @@ const useStyles = makeStyles((theme) => ({
 	title: {
 		fontSize: 20,
 	},
-	paper: {
-		padding: theme.spacing(2),
-		textAlign: 'center',
-		color: theme.palette.text.secondary,
-	},
+	// paper: {
+	// 	padding: theme.spacing(2),
+	// 	textAlign: 'center',
+	// 	color: theme.palette.text.secondary,
+	// },
 }));
 
 function Bathroom(props) {
@@ -47,42 +47,42 @@ function Bathroom(props) {
 
 	return (
 		<React.Fragment>
-			<Grid container component="main" className={classes.root} spacing={10}>
+			{/* <Grid container component="main" className={classes.root} spacing={10}>
 				<CssBaseline />
 				<Grid item med={false} sm={4} md={7} className={classes.image} />
-				<Grid item med={12} sm={8} md={5} spacing={3}>
-					<div className={classes.paper}>
-						<Card className={classes.root}>
-							<CardContent>
-								<Typography variant="h5" component="h2">
-									{props.name}
-								</Typography>
-								<Typography variant="body2" component="p">
-									{props.street} <br />
-								</Typography>
-							</CardContent>
-							<CardActions>
-								<StyledButton
-									variant="outlined"
-									size="lg"
-									onClick={() => props.whenBathroomClicked(props.id)}
-								>
-									{' '}
-									See Details{' '}
-								</StyledButton>
-								<Tooltip title="Details" arrow>
-									<img
-										src={address}
-										alt="address"
-										onClick={() => props.whenBathroomClicked(props.id)}
-									/>
-								</Tooltip>
-							</CardActions>
-						</Card>
-						<hr />
-					</div>
-				</Grid>
-			</Grid>
+				<Grid item med={12} sm={8} md={5} spacing={3}> */}
+			{/* <div className={classes.paper}> */}
+			<Card className={classes.root}>
+				<CardContent>
+					<Typography variant="h5" component="h2">
+						{props.name}
+					</Typography>
+					<Typography variant="body2" component="p">
+						{props.street} <br />
+					</Typography>
+				</CardContent>
+				<CardActions>
+					<StyledButton
+						variant="outlined"
+						size="lg"
+						onClick={() => props.whenBathroomClicked(props.id)}
+					>
+						{' '}
+						See Details{' '}
+					</StyledButton>
+					<Tooltip title="Details" arrow>
+						<img
+							src={address}
+							alt="address"
+							onClick={() => props.whenBathroomClicked(props.id)}
+						/>
+					</Tooltip>
+				</CardActions>
+			</Card>
+			<hr />
+			{/* </div> */}
+			{/* </Grid>
+			</Grid> */}
 		</React.Fragment>
 	);
 }
