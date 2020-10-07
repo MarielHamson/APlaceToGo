@@ -10,7 +10,7 @@ body {
 		url(../src/assets/images/background80.jpg) no-repeat center center fixed,
 		linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
 	margin: 0;
-	font-family: 'Sacramento', cursive, monospace;
+	/* font-family: 'Sacramento', cursive, monospace; */
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }

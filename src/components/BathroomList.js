@@ -12,14 +12,14 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		boxShadow: 'inset (0, 0, 50px, #fff)',
-		boxShadow: 'inset (20px, 0, 80px, #f0f)',
-		boxShadow: 'inset (-20px, 0, 80px, #0ff)',
-		boxShadow: 'inset (20px, 0, 300px, #f0f)',
-		boxShadow: 'inset (-20px, 0, 300px, #0ff)',
-		boxShadow: '0 0 50px #fff',
-		boxShadow: '-10px 0 80px #f0f',
-		boxShadow: '10px 0 80px #0ff',
+		// boxShadow: 'inset (0, 0, 50px, #fff)',
+		// boxShadow: 'inset (20px, 0, 80px, #f0f)',
+		// boxShadow: 'inset (-20px, 0, 80px, #0ff)',
+		// boxShadow: 'inset (20px, 0, 300px, #f0f)',
+		// boxShadow: 'inset (-20px, 0, 300px, #0ff)',
+		// boxShadow: '0 0 50px #fff',
+		// boxShadow: '-10px 0 80px #f0f',
+		// boxShadow: '10px 0 80px #0ff',
 	},
 }));
 
