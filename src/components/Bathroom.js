@@ -5,13 +5,8 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import { withStyles } from '@material-ui/core';
-import mapmarkedalt from './../assets/images/map-marked-alt-solid.svg';
+import location96 from './../assets/images/location96.svg';
 import Tooltip from '@material-ui/core/Tooltip';
-import Grid from '@material-ui/core/Grid';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles((theme) => ({
 	root: {
@@ -61,7 +56,7 @@ function Bathroom(props) {
 						<Tooltip title="Details" arrow>
 							<img
 								className={classes.image}
-								src={mapmarkedalt}
+								src={location96}
 								alt="address"
 								onClick={() => props.whenBathroomClicked(props.id)}
 							/>

@@ -5,27 +5,10 @@ import { useFirestoreConnect, isLoaded } from 'react-redux-firebase';
 import React from 'react';
 import { useSpring, animated, config } from 'react-spring';
 import '../index.css';
-import { makeStyles } from '@material-ui/core/styles';
 import Container from 'react-bootstrap/Container';
 import Grid from '@material-ui/core/Grid';
-import CssBaseline from '@material-ui/core/CssBaseline';
-
-const useStyles = makeStyles((theme) => ({
-	root: {
-		// boxShadow: 'inset (0, 0, 50px, #fff)',
-		// boxShadow: 'inset (20px, 0, 80px, #f0f)',
-		// boxShadow: 'inset (-20px, 0, 80px, #0ff)',
-		// boxShadow: 'inset (20px, 0, 300px, #f0f)',
-		// boxShadow: 'inset (-20px, 0, 300px, #0ff)',
-		// boxShadow: '0 0 50px #fff',
-		// boxShadow: '-10px 0 80px #f0f',
-		// boxShadow: '10px 0 80px #0ff',
-	},
-}));
 
 function BathroomList(props) {
-	const classes = useStyles();
-
 	const multiAnimation = useSpring({
 		config: config.wobbly,
 		from: { opacity: 0, color: 'red' },
@@ -50,10 +33,10 @@ function BathroomList(props) {
 					</animated.h1>
 				</div>
 				<Container class="container">
-					<Grid container className={classes.root} spacing={3}>
+					<Grid container spacing={3}>
 						{bathrooms.map((bathroom) => {
 							return (
-								<Grid item lg>
+								<Grid item med>
 									<Bathroom
 										whenBathroomClicked={props.onBathroomSelection}
 										name={bathroom.name}

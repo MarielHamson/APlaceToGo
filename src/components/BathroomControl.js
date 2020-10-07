@@ -16,7 +16,6 @@ const StyledButton = withStyles({
 		background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
 		borderRadius: 3,
 		border: 0,
-		// color: '#1e0253',
 		height: 48,
 		padding: '0 30px',
 		boxShadow: 'inset (0, 0, 50px, #fff)',
@@ -80,6 +79,11 @@ class BathroomControl extends React.Component {
 		}
 	};
 
+	handleSearchQuery = (searchObject) => {
+		this.setState({ search: searchObject });
+	};
+
+
 	handleAddBathroomToList = () => {
 		this.setState({
 			formVisibleOnPage: false,
@@ -119,10 +123,6 @@ class BathroomControl extends React.Component {
 	handleDeleteBathroom = (id) => {
 		this.props.firestore.delete({ collection: 'bathrooms', doc: id });
 		this.setState({ selectedBathroom: null });
-	};
-
-	handleSearchQuery = (searchObject) => {
-		this.setState({ search: searchObject });
 	};
 
 	render() {

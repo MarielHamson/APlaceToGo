@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from '@material-ui/core/Button';
 import { Container, TextField } from '@material-ui/core';
-import Avatar from '@material-ui/core/Avatar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
-import BathtubIcon from '@material-ui/icons/Bathtub';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import { withStyles } from '@material-ui/core';
+import Avatar from '@material-ui/core/Avatar';
+import toilet96 from '../assets/images/toilet96.svg';
 
 const StyledButton = withStyles({
 	root: {
@@ -59,7 +59,6 @@ const useStyles = makeStyles((theme) => ({
 	},
 	avatar: {
 		margin: theme.spacing(1),
-		backgroundColor: theme.palette.secondary.main,
 	},
 	form: {
 		width: '75%',
@@ -91,9 +90,7 @@ function ReusableForm(props) {
 						square
 					>
 						<div className={classes.paper}>
-							<Avatar className={classes.avatar}>
-								<BathtubIcon />
-							</Avatar>
+							<Avatar className={classes.avatar} src={toilet96}></Avatar>
 							<form
 								className={classes.form}
 								onSubmit={props.formSubmissionHandler}

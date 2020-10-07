@@ -3,10 +3,6 @@ import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import { Grid } from '@material-ui/core';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
 import Container from '@material-ui/core/Container';
 
 const StyledButton = withStyles({
@@ -65,11 +61,6 @@ function BathroomDetail(props) {
 	return (
 		<React.Fragment>
 			<Container>
-				{/* <Grid container component="main" className={classes.root}>
-					<Grid item xs={12} sm={8} md={5} elevation={6} square> */}
-				{/* <div className={classes.root}> */}
-				{/* <Card className={classes.root}>
-								<CardContent> */}
 				<p className={classes.headline}>Bathroom Details</p>
 				<p className={classes.paper}>
 					{bathroom.name} - {bathroom.street}, {bathroom.state}
@@ -94,11 +85,6 @@ function BathroomDetail(props) {
 				>
 					Delete Bathroom from List
 				</StyledButton>
-				{/* </CardContent>
-							</Card> */}
-				{/* </div> */}
-				{/* </Grid>
-				</Grid> */})
 			</Container>
 		</React.Fragment>
 	);
