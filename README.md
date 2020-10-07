@@ -78,32 +78,29 @@ Finding a safe restroom while out-and-about can be challenging for certain commu
 
 A Place To Go is [emailware](https://en.wiktionary.org/wiki/emailware). Meaning, if you liked using this app or it has helped you in any way, I'd like you send me an email at <mariel.hamson@gmail.com> about anything you'd want to say about this software. I'd really appreciate it!
 
-## Credits
+## Technology Used
 
-This software uses the following technologies:
+|                                                                                                          |                                                                                          |                                                                                              |                                                                                          |
+| -------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| <a href="https://www.javascript.com/"><img src="https://i.ibb.co/wBxFph1/JS.jpg"></a>                    | <a href="https://reactjs.org/docs/introducing-jsx.html"><img src="public/react.png"></a> | <a href="https://nodejs.org/en/"><img src="public/nodejs.png"></a>                           | <a href="https://www.firebase.google.com/firestore"><img src="public/firestore.png"></a> | <a href="https://material-ui.com/"><img src="public/material.png"></a> |
+| <a href="https://www.w3.org/Style/CSS/Overview.en.html"><img src="https://i.ibb.co/2y8kcD2/css.png"></a> | <a href="https://getbootstrap.com/"><img src="public/material.png"></a>                  | <a href="https://code.visualstudio.com/"><img src="https://i.ibb.co/TT523dM/vscode.png"></a> |
 
-- Javascript (JSX)
-- React with Redux
-- Firebase with Firestore
-- React-Spring
-- Moment.js
-- Font Awesome
-- Webpack
-- Material UI
+<hr />
 
 ## Support
 
-<a href="https://www.buymeacoffee.com/" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/purple_img.png" alt="Buy Me A Coffee" style="height: 41px !important;width: 174px !important;box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 3px 2px 0px rgba(190, 190, 190, 0.5) !important;" ></a>
+<a href="https://www.buymeacoffee.com/MarielHamson" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
 
 <p>Or</p>
 
-<a href="https://www.patreon.com/">
+<a href="https://www.patreon.com/MarielHamson">
 	<img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="160">
 </a>
 
 ## You may also like...
 
--- Other projects in my GitHub Repository
+[Project Me Finder](www.github.com/MarielHamson/ProjectMeFinder) <br>
+[Safer Spaces](www.github.com/MarielHamson/SaferSpaces.Client)
 
 ## License
 
@@ -111,6 +108,6 @@ MIT
 
 ---
 
-> LinkedIn[MarielHamson](https://www.linkedin.com/MarielHamson) &nbsp;&middot;&nbsp;
+> LinkedIn [MarielHamson](https://www.linkedin.com/MarielHamson) &nbsp;&middot;&nbsp;
 > GitHub [MarielHamson](https://github.com/MarielHamson) &nbsp;&middot;&nbsp;
 > Instagram [Miriquitecontrary](https://instagram.com/miriquitecontrary)

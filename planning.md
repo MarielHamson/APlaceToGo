@@ -38,36 +38,40 @@ review API calls and download JSON
 
 10/2
 
-9:00-10:20 -- trouble with firebase, created new project due to some errors with admin permissions, updating github, wiped my history from last friday.
+## 9:00-10:20 -- trouble with firebase, created new project due to some errors with admin permissions, updating github, wiped my history from last friday.
 
-10:30-11:00: Firebase is broken. Trying to add database is not allowed. Slightly freaking out but working on Material UI
+## 10:30-11:00: Firebase is broken. Trying to add database is not allowed. Slightly freaking out but working on Material UI
 
-11:00 - 1:05: Played with Material Design and nav bar templates for too long. Most were too complex for this project. Returning to work on functionality next
+## 11:00 - 1:05: Played with Material Design and nav bar templates for too long. Most were too complex for this project. Returning to work on functionality next
 
-1:13: Found out my CORS extension was ruining my life. Wow.
+## 1:13: Found out my CORS extension was ruining my life. Wow.
 
-1:00 - 3:00 worked on checkbox values not showing and import. Neither work still.
+## 1:00 - 3:00 worked on checkbox values not showing and import. Neither work still.
 
-3:00 - 4:40: break
+## 3:00 - 4:40: break
 
-4:40 - 6:18: grid layout
+## 4:40 - 6:18: grid layout
 
 ---
 
 10/3
 
-11:00 - 12:00 worked on sign out button, read stack overflow
+## 11:00 - 12:00 worked on sign out button, read stack overflow
 
 10/4
 
-1:00-1:30 tried to fix sign out bug
+## 1:00-1:30 tried to fix sign out bug
 
-3:45- : 5:00 styling buttons and main page
+## 3:45- : 5:00 styling buttons and main page
 
-7:15 - 10:45 tried something new with bathroom ID to create a different route in order to get the brand logo to redirect correctly when on details page. Didn't work so reverted.
+## 7:15 - 10:45 tried something new with bathroom ID to create a different route in order to get the brand logo to redirect correctly when on details page. Didn't work so reverted.
 
 ---
 
 10/6
 
-8:00 - 10:00am researched testing with JEST to refamiliarize myself (went down a couple rabbit holes) Unsure if i still want to implement testing over other features.
+## 8:00 - 10:00am researched testing with JEST to refamiliarize myself (went down a couple rabbit holes) Unsure if i still want to implement testing over other features.
+
+10/7
+
+## 2:00pm - 4:00pm: Readme and planning timeline update
