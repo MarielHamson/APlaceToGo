@@ -12,7 +12,7 @@ function EditBathroomForm(props) {
 		event.preventDefault();
 		props.onEditBathroom();
 		const propertiesToUpdate = {
-			name: event.target.bathroomName.value,
+			name: event.target.name.value,
 			street: event.target.street.value,
 			state: event.target.state.value,
 			accessible: event.target.accessible.value,

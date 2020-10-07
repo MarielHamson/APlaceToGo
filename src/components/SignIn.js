@@ -51,13 +51,9 @@ const useStyles = makeStyles((theme) => ({
 		background: '#1e0253',
 	},
 	image: {
-		backgroundImage: `url(${process.env.PUBLIC_URL}/ocean.jpeg)`,
+		backgroundImage: `url(${process.env.PUBLIC_URL}/Original.png)`,
 		backgroundRepeat: 'no-repeat',
-		backgroundColor:
-			theme.palette.type === 'light'
-				? theme.palette.grey[50]
-				: theme.palette.grey[900],
-		backgroundSize: 'cover',
+		backgroundColor: '#1e0253',
 		backgroundPosition: 'center',
 	},
 	paper: {

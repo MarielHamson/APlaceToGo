@@ -5,6 +5,9 @@ import { withStyles } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { Grid } from '@material-ui/core';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import Container from '@material-ui/core/Container';
 
 const StyledButton = withStyles({
 	root: {
@@ -24,25 +27,34 @@ const StyledButton = withStyles({
 const useStyles = makeStyles((theme) => ({
 	root: {
 		height: '100vh',
-		background: '#c637a0',
+		background: `url(${process.env.PUBLIC_URL}/background80.jpg)`,
+		size: '20px',
 	},
-	image: {
-		backgroundImage: `url(${process.env.PUBLIC_URL}/potty.jpeg)`,
-		backgroundRepeat: 'no-repeat',
-		backgroundSize: 'cover',
-		backgroundPosition: 'center',
-	},
+	// image: {
+	// 	backgroundImage: `url(${process.env.PUBLIC_URL}/potty.jpeg)`,
+	// 	backgroundRepeat: 'no-repeat',
+	// 	backgroundSize: 'cover',
+	// 	backgroundPosition: 'center',
+	// },
 	paper: {
 		margin: theme.spacing(8, 4),
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'right',
-		background: '#c637a0',
+		background: `url(${process.env.PUBLIC_URL}/background80.jpg)`,
 		fontFamily: 'Montserrat',
+		color: 'white',
+		fontSize: '20px',
 	},
 	gridContainer: {
-		paddingLeft: '40px',
-		paddingRight: '40px',
+		paddingLeft: '80px',
+		paddingRight: '80px',
+	},
+	headline: {
+		fontFamily: 'Sacramento, cursive',
+		fontWeight: '500',
+		fontSize: '50px',
+		color: 'white',
 	},
 }));
 
@@ -52,41 +64,52 @@ function BathroomDetail(props) {
 
 	return (
 		<React.Fragment>
-			<Grid container component="main" className={classes.root}>
-				<CssBaseline />
-				<Grid item xs={false} sm={4} md={7} className={classes.image} />
-				<Grid item xs={12} sm={8} md={5} elevation={6} square>
-					<div className={classes.paper}>
-						<h1>Bathroom Details</h1>
-						<h2 class="details">
-							{bathroom.name} - {bathroom.street}, {bathroom.state}
-						</h2>
-						<p class="details">Accessible: {bathroom.accessible}</p>
-						<p class="details">Gender Neutral: {bathroom.unisex}</p>
-						<p class="details">Directions: {bathroom.directions} </p>
-						<p class="details">Comments: {bathroom.comment}</p>
+			<Container>
+				<Grid container component="main" className={classes.root}>
+					{/* <Grid item xs={false} sm={4} md={7} className={classes.image} /> */}
+					<Grid item xs={12} sm={8} md={5} elevation={6} square>
+						<div className={classes.paper}>
+							<Card className={classes.root}>
+								<CardContent>
+									<p className={classes.headline}>Bathroom Details</p>
+									<p className={classes.paper}>
+										{bathroom.name} - {bathroom.street}, {bathroom.state}
+									</p>
+									<p className={classes.paper}>
+										Accessible: {bathroom.accessible}
+									</p>
+									<p className={classes.paper}>
+										Gender Neutral: {bathroom.unisex}
+									</p>
+									<p className={classes.paper}>
+										Directions: {bathroom.directions}{' '}
+									</p>
+									<p className={classes.paper}>Comments: {bathroom.comment}</p>
 
-						<StyledButton
-							className="mr-2"
-							variant="info"
-							onClick={props.onClickingEdit}
-						>
-							Edit Bathroom Details
-						</StyledButton>
-						<br />
-						<StyledButton
-							className="mr-2"
-							variant="info"
-							onClick={() => onClickingDelete(bathroom.id)}
-						>
-							Delete Bathroom from List
-						</StyledButton>
+									<StyledButton
+										className="mr-2"
+										variant="info"
+										onClick={props.onClickingEdit}
+									>
+										Edit Bathroom Details
+									</StyledButton>
+									<br />
+									<br />
 
-						<hr />
-					</div>
+									<StyledButton
+										className="mr-2"
+										variant="info"
+										onClick={() => onClickingDelete(bathroom.id)}
+									>
+										Delete Bathroom from List
+									</StyledButton>
+								</CardContent>
+							</Card>
+						</div>
+					</Grid>
 				</Grid>
-			</Grid>
-			)
+				)
+			</Container>
 		</React.Fragment>
 	);
 }

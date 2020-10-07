@@ -20,7 +20,9 @@ const StyledButton = withStyles({
 		height: 48,
 		padding: '0 30px',
 		boxShadow: '0 3px 5px 2px rgba(255, 105, 135, .3)',
+		margin: 'auto',
 	},
+
 	label: {
 		textTransform: 'capitalize',
 	},
@@ -33,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 		border: '#e9e9e9',
 	},
 	image: {
-		backgroundImage: 'url(https://source.unsplash.com/featured/?{bathroom})',
+		backgroundImage: `url(${process.env.PUBLIC_URL}/ocean.jpeg)`,
 		backgroundRepeat: 'no-repeat',
 		backgroundColor:
 			theme.palette.type === 'light'
@@ -189,11 +191,13 @@ function ReusableForm(props) {
 									label="Comments"
 									placeholder="The staff is cool even if you don't buy"
 								/>
-								<div id="buttons">
-									<StyledButton className="mb-2" variant="info" type="submit">
-										{props.buttonText}
-									</StyledButton>
-								</div>
+								<StyledButton
+									className="mb-2 buttons"
+									variant="info"
+									type="submit"
+								>
+									{props.buttonText}
+								</StyledButton>
 							</form>
 						</div>
 					</Grid>

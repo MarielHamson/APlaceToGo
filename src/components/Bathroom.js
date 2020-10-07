@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core';
-import address from './../assets/images/address.png';
+import mapmarkedalt from './../assets/images/map-marked-alt-solid.svg';
 import Tooltip from '@material-ui/core/Tooltip';
 import Grid from '@material-ui/core/Grid';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -54,7 +54,7 @@ function Bathroom(props) {
 						<Tooltip title="Details" arrow>
 							<img
 								className={classes.image}
-								src={address}
+								src={mapmarkedalt}
 								alt="address"
 								onClick={() => props.whenBathroomClicked(props.id)}
 							/>
