@@ -33,28 +33,16 @@ const StyledButton = withStyles({
 
 const useStyles = makeStyles((theme) => ({
 	root: {
-		height: '100vh',
+		// height: '100vh',
 		background: `url(${process.env.PUBLIC_URL}/background80.jpg)`,
 		size: '20px',
-		// boxShadow: 'inset (0, 0, 50px, #fff)',
-		// boxShadow: 'inset (20px, 0, 80px, #f0f)',
-		// boxShadow: 'inset (-20px, 0, 80px, #0ff)',
-		// boxShadow: 'inset (20px, 0, 300px, #f0f)',
-		// boxShadow: 'inset (-20px, 0, 300px, #0ff)',
-		// boxShadow: '0 0 50px #fff',
-		// boxShadow: '-10px 0 80px #f0f',
-		// boxShadow: '10px 0 80px #0ff',
+		overflowY: 'scroll',
 	},
-	// image: {
-	// 	backgroundImage: `url(${process.env.PUBLIC_URL}/potty.jpeg)`,
-	// 	backgroundRepeat: 'no-repeat',
-	// 	backgroundSize: 'cover',
-	// 	backgroundPosition: 'center',
-	// },
+
 	paper: {
 		margin: theme.spacing(8, 4),
 		display: 'flex',
-		flexDirection: 'column',
+		// flexDirection: 'column',
 		alignItems: 'right',
 		background: `url(${process.env.PUBLIC_URL}/background80.jpg)`,
 		fontFamily: 'Montserrat',
@@ -80,49 +68,40 @@ function BathroomDetail(props) {
 	return (
 		<React.Fragment>
 			<Container>
-				<Grid container component="main" className={classes.root}>
-					<Grid item xs={12} sm={8} md={5} elevation={6} square>
-						<div className={classes.paper}>
-							<Card className={classes.root}>
-								<CardContent>
-									<p className={classes.headline}>Bathroom Details</p>
-									<p className={classes.paper}>
-										{bathroom.name} - {bathroom.street}, {bathroom.state}
-									</p>
-									<p className={classes.paper}>
-										Accessible: {bathroom.accessible}
-									</p>
-									<p className={classes.paper}>
-										Gender Neutral: {bathroom.unisex}
-									</p>
-									<p className={classes.paper}>
-										Directions: {bathroom.directions}{' '}
-									</p>
-									<p className={classes.paper}>Comments: {bathroom.comment}</p>
-
-									<StyledButton
-										className="mr-2"
-										variant="info"
-										onClick={props.onClickingEdit}
-									>
-										Edit Bathroom Details
-									</StyledButton>
-									<br />
-									<br />
-
-									<StyledButton
-										className="mr-2"
-										variant="info"
-										onClick={() => onClickingDelete(bathroom.id)}
-									>
-										Delete Bathroom from List
-									</StyledButton>
-								</CardContent>
-							</Card>
-						</div>
-					</Grid>
-				</Grid>
-				)
+				{/* <Grid container component="main" className={classes.root}>
+					<Grid item xs={12} sm={8} md={5} elevation={6} square> */}
+				{/* <div className={classes.root}> */}
+				{/* <Card className={classes.root}>
+								<CardContent> */}
+				<p className={classes.headline}>Bathroom Details</p>
+				<p className={classes.paper}>
+					{bathroom.name} - {bathroom.street}, {bathroom.state}
+				</p>
+				<p className={classes.paper}>Accessible: {bathroom.accessible}</p>
+				<p className={classes.paper}>Gender Neutral: {bathroom.unisex}</p>
+				<p className={classes.paper}>Directions: {bathroom.directions} </p>
+				<p className={classes.paper}>Comments: {bathroom.comment}</p>
+				<StyledButton
+					className="mr-2"
+					variant="info"
+					onClick={props.onClickingEdit}
+				>
+					Edit Bathroom Details
+				</StyledButton>
+				<br />
+				<br />
+				<StyledButton
+					className="mr-2"
+					variant="info"
+					onClick={() => onClickingDelete(bathroom.id)}
+				>
+					Delete Bathroom from List
+				</StyledButton>
+				{/* </CardContent>
+							</Card> */}
+				{/* </div> */}
+				{/* </Grid>
+				</Grid> */})
 			</Container>
 		</React.Fragment>
 	);

@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
 		height: '100vh',
 		background: '#1e0253',
 		border: '#e9e9e9',
+		overflowY: 'scroll',
 	},
 	image: {
 		backgroundImage: `url(${process.env.PUBLIC_URL}/ocean.jpeg)`,
