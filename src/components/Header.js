@@ -70,10 +70,10 @@ function Header(props) {
 		<React.Fragment>
 			<Navbar
 				style={{
-					backgroundColor: '#1e0253',
+					// backgroundColor: '#1e0253',
 					color: '#c637a0',
 				}}
-				sticky="top"
+				sticky="bottom"
 				expand="lg"
 			>
 				<Navbar.Brand

@@ -63,7 +63,7 @@ function BathroomList(props) {
 				<Container class="container">
 					<Grid container component="main" className={classes.root}>
 						<CssBaseline />
-						<Grid item xs={false} sm={4} md={7} className={classes.image} />
+						{/* <Grid item xs={false} sm={4} md={7} className={classes.image} /> */}
 						<Grid item xs={12} sm={8} md={5}>
 							<div className={classes.paper}>
 								{bathrooms.map((bathroom) => {
