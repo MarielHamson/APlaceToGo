@@ -7,8 +7,16 @@ import { useSpring, animated, config } from 'react-spring';
 import '../index.css';
 import Container from 'react-bootstrap/Container';
 import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+	gridContainer: {
+		display: 'block',
+	},
+}));
 
 function BathroomList(props) {
+	const classes = useStyles();
 	const multiAnimation = useSpring({
 		config: config.wobbly,
 		from: { opacity: 0, color: 'red' },
@@ -33,7 +41,12 @@ function BathroomList(props) {
 					</animated.h1>
 				</div>
 				<Container class="container">
-					<Grid container spacing={3}>
+					<Grid
+						container
+						padding={0}
+						className={classes.gridContainer}
+						spacing={3}
+					>
 						{bathrooms.map((bathroom) => {
 							return (
 								<Grid item med>

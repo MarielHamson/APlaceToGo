@@ -74,4 +74,6 @@ review API calls and download JSON
 
 10/7
 
+## 8:00am - 9:30am: research react-spring and firebase queries some more
+
 ## 2:00pm - 4:00pm: Readme and planning timeline update

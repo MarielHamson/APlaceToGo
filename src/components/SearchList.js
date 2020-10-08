@@ -5,12 +5,10 @@ import { useFirestoreConnect, isLoaded } from 'react-redux-firebase';
 import Card from '@material-ui/core/Card';
 import { makeStyles } from '@material-ui/core';
 import CardContent from '@material-ui/core/CardContent';
-import { useFirestore } from 'react-redux-firebase';
 
 const useStyles = makeStyles({
 	root: {
 		minWidth: 200,
-		// maxWidth: 400,
 		background: 'lightgrey',
 		marginLeft: '20rem',
 		marginRight: '20rem',
@@ -28,7 +26,6 @@ const useStyles = makeStyles({
 });
 
 function SearchList(props) {
-	const firestore = useFirestore();
 	const { searchReturn } = props;
 	const classes = useStyles();
 
