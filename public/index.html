@@ -17,6 +17,74 @@
 		<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 		<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+		<script type="text/javascript">
+			// 86acbd31cd7c09cf30acb66d2fbedc91daa48b86:1630186563.7986286
+			!(function (n, r, e, t, c) {
+				var i,
+					o = 'Promise' in n,
+					u = {
+						then: function () {
+							return u;
+						},
+						catch: function (n) {
+							return n(new Error('Airship SDK Error: Unsupported browser')), u;
+						},
+					},
+					s = o
+						? new Promise(function (n, r) {
+								i = function (e, t) {
+									e ? r(e) : n(t);
+								};
+						  })
+						: u;
+				(s._async_setup = function (n) {
+					if (o)
+						try {
+							i(null, n(c));
+						} catch (n) {
+							i(n);
+						}
+				}),
+					(n[t] = s);
+				var a = r.createElement('script');
+				(a.src = e),
+					(a.async = !0),
+					(a.id = '_uasdk'),
+					(a.rel = t),
+					r.head.appendChild(a);
+			})(
+				window,
+				document,
+				'https://aswpsdkus.com/notify/v1/ua-sdk.min.js',
+				'UA',
+				{
+					// Only needed when used on insecure hosts:
+					// secureIframeUrl: 'https://your.secure.domain/path/to/web-push-secure-bridge.html',
+
+					vapidPublicKey:
+						'BJ7w1Pkr-xRs9D8JZz4E-9TmJyF9BSzTJTEIup_-_BETQkhRFXbJo2PdDXyHqlMCO2EuI04-TGAWZIv9mmMm3m4=',
+					appKey: 'mIPLg9r0QCKhhlP0rwu8CA',
+					token:
+						'MTptSVBMZzlyMFFDS2hobFAwcnd1OENBOkV4QkxRWmpVZnh2SUN0NG1nclgzWGkydE1jSDlfOW1CUWE4X0FwN2VacTA',
+				}
+			);
+		</script>
+		<script>
+			importScripts('https://aswpsdkus.com/notify/v1/ua-sdk.min.js');
+			uaSetup.worker(self, {
+				defaultIcon:
+					'https://images.unsplash.com/photo\u002D1630101129455\u002Db7b74fa5788d?ixid\u003DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8\u0026ixlib\u003Drb\u002D1.2.1\u0026auto\u003Dformat\u0026fit\u003Dcrop\u0026w\u003D1500\u0026q\u003D80',
+				defaultTitle: 'Sign in to access list',
+				defaultActionURL:
+					'https://a\u002Dplace\u002Dto\u002Dgo\u002Dd3310.web.app/signin',
+				appKey: 'mIPLg9r0QCKhhlP0rwu8CA',
+				token:
+					'MTptSVBMZzlyMFFDS2hobFAwcnd1OENBOkV4QkxRWmpVZnh2SUN0NG1nclgzWGkydE1jSDlfOW1CUWE4X0FwN2VacTA',
+				vapidPublicKey:
+					'BJ7w1Pkr-xRs9D8JZz4E-9TmJyF9BSzTJTEIup_-_BETQkhRFXbJo2PdDXyHqlMCO2EuI04-TGAWZIv9mmMm3m4=',
+			});
+		</script>
+
 		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 		<title>A Place To Go</title>
 	</head>
