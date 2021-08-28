@@ -83,6 +83,12 @@
 				vapidPublicKey:
 					'BJ7w1Pkr-xRs9D8JZz4E-9TmJyF9BSzTJTEIup_-_BETQkhRFXbJo2PdDXyHqlMCO2EuI04-TGAWZIv9mmMm3m4=',
 			});
+
+			UA.then((sdk) => {
+				sdk.getChannel().then((channel) => {
+					console.log('Channel ID: %s', channel.id);
+				});
+			});
 		</script>
 
 		<link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
