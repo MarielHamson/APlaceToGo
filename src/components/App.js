@@ -7,13 +7,13 @@ import BathroomControl from './BathroomControl';
 import '@carto/airship-style/dist/airship.css';
 import { defineCustomElements } from '@carto/airship-components/dist/loader';
 
-const theme = createMuiTheme({
-	palette: {
-		primary: {
-			main: '#c637a0',
-		},
-	},
-});
+// const theme = createMuiTheme({
+// 	palette: {
+// 		primary: {
+// 			main: '#c637a0',
+// 		},
+// 	},
+// });
 
 defineCustomElements(window);
 
