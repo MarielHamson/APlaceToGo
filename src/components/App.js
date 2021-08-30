@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/core/styles';
 import BathroomControl from './BathroomControl';
+import '@carto/airship-style/dist/airship.css';
+import { defineCustomElements } from '@carto/airship-components/dist/loader';
 
 const theme = createMuiTheme({
 	palette: {
@@ -12,6 +14,8 @@ const theme = createMuiTheme({
 		},
 	},
 });
+
+defineCustomElements(window);
 
 function App() {
 	return (
