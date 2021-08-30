@@ -36,9 +36,7 @@ function BathroomList(props) {
 		return (
 			<React.Fragment>
 				<div id="headline">
-					<animated.h1 style={multiAnimation}>
-						Welcome, Bathroom Seeker!
-					</animated.h1>
+					<animated.h1 style={multiAnimation}>Bathroom Seeker!</animated.h1>
 				</div>
 				<Container class="container">
 					<Grid
