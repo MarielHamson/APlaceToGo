@@ -83,7 +83,6 @@ class BathroomControl extends React.Component {
 		this.setState({ search: searchObject });
 	};
 
-
 	handleAddBathroomToList = () => {
 		this.setState({
 			formVisibleOnPage: false,
@@ -142,7 +141,7 @@ class BathroomControl extends React.Component {
 				<React.Fragment>
 					<Header className="header" />
 					<Container className="container">
-						<p id="accessHeadline">Welcome to A Place To Go </p>
+						<p id="accessHeadline"> Poop - A Place To Go </p>
 						<p id="accessTagline">Please sign in to view the bathroom list</p>
 					</Container>
 				</React.Fragment>
